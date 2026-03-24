@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <caption>
+        <h2>Registration Form</h2>
+      </caption>
+      <label for="firstName"
+        >First Name :
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="Enter First Name"
+        />
+      </label>
+      <br />
+      <label for="lastName"
+        >Last Name :
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Enter Last Name"
+        />
+      </label>
+      <br />
+      <label for="email"
+        >Email :
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Email Address"
+        />
+      </label>
+      <br />
+      <label for="password"
+        >Password
+        <input type="password" name="password" id="password" />
+      </label>
+      <br />
+      <span>Gender:</span>
+      <br />
+      <label for="male"
+        >Male
+        <input type="radio" name="gender" id="male" />
+      </label>
+      <br />
+      <label for="female"
+        >Female
+        <input type="radio" name="gender" id="female" />
+      </label>
+      <br />
+      <label for="other"
+        >other
+        <input type="radio" name="gender" id="other" />
+      </label>
+      <br />
+      <label for="age">
+        Age :
+        <input type="number" name="age" id="age" />
+      </label>
+      <br />
+      <span> Preferecnes : </span>
+      <br />
+      <span>Arcylic Painting</span>
+      <input type="checkbox" name="arcylic" id="color">
+      <br />
+      <span>Oil Painting</span>
+      <input type="checkbox" name="oil" id="color">
+      <br />
+      <span>Water Color Painting</span>
+      <input type="checkbox" name="waterColor" id="color">
+      <br />
+      <span>Select Occupation</span>
+      <select name="occupation" id="occupation">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="buisness">Buisnessman</option>
+      </select>
+      <br />
+      <span>Bio</span>
+      <textarea placeholder="Share few lines about yourself..."></textarea>
+      <br />
+      <button type="reset">RESET</button>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
