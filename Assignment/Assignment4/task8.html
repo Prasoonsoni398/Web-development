@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <caption>
+          <h2>Farewell Party Survey Form</h2>
+        </caption>
+        <label for="name"
+          >Name
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </label>
+        <br /><br />
+        <label for="email"
+          >Email
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </label>
+        <br /><br />
+        <label for="age"
+          >Age
+          <input
+            type="text"
+            name="age"
+            id="age"
+            placeholder="Enter your age"
+          /> </label
+        ><br /><br />
+        <span>Which option best describes you?</span>
+        <select name="role" id="role">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="hod">HOD</option>
+        </select>
+        <br /><br />
+        <span>Will you attend the party?</span>
+        <input type="radio" name="questionforparty" id="yes" /><span>Yes</span>
+        <input type="radio" name="questionforparty" id="no" /><span>No</span>
+        <br /><br />
+        <span>What did you like about the program?</span>
+        <br />
+        <input type="checkbox" /><span>Training</span><br />
+
+        <input type="checkbox" /><span
+          >The Learning Sessions from Industry Experts</span
+        ><br />
+        <input type="checkbox" /><span>Community meetups</span><br />
+        <input type="checkbox" /><span>Brown Bag Sessions</span><br />
+        <input type="checkbox" /><span>Switching to Hybrid Mode</span><br />
+        <input type="checkbox" /><span>Food, Office etc.</span><br />
+        <span>Any comments or suggestions</span>
+        <textarea name="suggestions" id="suggestions"></textarea>
+        <br /><br />
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

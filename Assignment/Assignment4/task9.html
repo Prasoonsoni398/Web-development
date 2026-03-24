@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <caption>
+          <h2>Pizza Order Form</h2>
+        </caption>
+        <label for="firstName"
+          >First Name:
+          <input type="text" name="firstName" id="firstName" />
+        </label>
+        <br /><br />
+        <label for="lastName"
+          >Last Name:
+          <input type="text" name="lastName" id="lastName" />
+        </label>
+        <br /><br />
+        <label for="email"
+          >Email:
+          <input type="text" name="email" id="email" />
+        </label>
+        <br /><br />
+        <label for="contact"
+          >Contact Number:
+          <input type="tel" name="contact" id="contact" />
+        </label>
+        <br /><br />
+        <label for="deliverydate"
+          >Preferred Delivery Data:
+          <input type="date" name="date" id="deliverydate" />
+        </label>
+        <br /><br />
+        <span>size:</span><br />
+        <input type="radio" name="size" id="small" /><span>Small</span>
+        <input type="radio" name="size" id="Medium" /><span>Medium</span>
+        <input type="radio" name="size" id="Large" /><span>Large</span>
+        <br /><br />
+        <span>Flavor:</span>
+        <br />
+        <label for="hawaiian">
+          <input type="checkbox" name="hawaiian" id="hawaiian" />
+          Hawaiian (Php 150.00)
+        </label>
+        <input type="number" />
+        <br />
+        <label for="pepperoni">
+          <input type="checkbox" name="pepperoni" id="pepperoni" />
+          Pepperoni (Php 140.00)
+        </label>
+        <input type="number" />
+        <br />
+        <label for="vegetable">
+          <input type="checkbox" name="vegetable" id="vegetable" />
+          Vegetabale (Php 130.00)
+        </label>
+        <input type="number" />
+        <br /><br />
+        <label for="creditnumber"
+          >Credit Card Number:
+          <input type="text" name="creditnumber" id="creditnumber" />
+        </label>
+        <br /><br />
+        <label for="PIN"
+          >PIN:
+          <input type="password" name="PIN" id="PIN" />
+        </label>
+        <br /><br />
+        <label for="note">
+          <textarea name="note" id="note"></textarea>
+        </label>
+        <br /><br />
+        <button type="submit">Submit Order</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

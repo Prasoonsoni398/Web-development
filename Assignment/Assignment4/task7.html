@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <caption>
+        <h2>User Input Form</h2>
+      </caption>
+      <fieldset>
+        <legend>Personal Particular</legend>
+        <label for="name"
+          >Name:
+          <input type="text" name="name" id="name" />
+        </label>
+        <br /><br />
+        <label for="password"
+          >Password:
+          <input type="password" name="password" id="password" />
+        </label>
+        <br /><br />
+        <label for="age"
+          >Age:
+          <input type="number" name="age" id="age" placeholder="< 1 year old" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Language</legend>
+        <input type="checkbox" name="java" id="java" />
+        <span>Java</span>
+        <input type="checkbox" name="c/c++" id="c/c++" /><span>C/+C++</span>
+        <input type="checkbox" name="c#" id="c#" /><span>C#</span>
+      </fieldset>
+      <fieldset>
+        <legend>Instruction</legend>
+        <textarea
+          name="Instruction"
+          id="Instruction"
+          placeholder="Enter your instruction here..."
+        ></textarea>
+      </fieldset>
+      <button type="submit">SEND</button>
+      <button type="reset">CLEAR</button>
+    </form>
+  </body>
+</html>
