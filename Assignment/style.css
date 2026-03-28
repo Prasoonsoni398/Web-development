@@ -1,0 +1,40 @@
+* {
+    background-color: #F5F7F6;
+    color: #2F3E34;
+}
+
+.headings {
+    color: #5A9E5A;
+}
+
+table {
+    background-color: #fff;
+}
+
+fieldset legend b {
+    color: #7FB77E;
+}
+
+fieldset {
+    background-color: #EAF5EA;
+}
+
+fieldset p {
+    background-color: #EAF5EA;
+}
+
+fieldset p b {
+    background-color: #EAF5EA;
+}
+
+button {
+    background-color: #7FB77E;
+    height: 25px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+button a{
+    background-color: #7FB77E;
+    color: white;
+}
