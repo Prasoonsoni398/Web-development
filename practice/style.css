@@ -1,0 +1,22 @@
+#outerdiv{
+    margin: 50px;
+    height: 300px;
+    width: 600px;
+    background-color: blue;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 18px 18px 10px 0 rgb(102, 102, 231);
+    
+}
+.innerdiv{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow:12px 12px 10px 0 rgb(72, 88, 191) ;
+}

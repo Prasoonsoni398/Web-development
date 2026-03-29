@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #0823ed;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: end;
+}
+#loginDiv{
+    height: 400px;
+    width: 350px;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+input{
+    border: none;
+    height: 20px;
+}
+.input{
+    border-bottom: 1px solid gray;
+    margin-left: 30px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+}
+.input input{
+    margin-left: 10px;
+    width: 250px;
+}
+.button button{
+    width: 290px;
+    height: 40px;
+    background-color: rgb(72, 72, 237);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+.checkboxDiv{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#registerDiv{
+    height: 550px;
+    width: 350px;
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#loginText{
+    display: flex;
+    font-size: 23px;
+    font-weight: bold;
+}
+span p{
+    border-bottom: 3px solid #0823ed;
+    border-radius: 2px;
+}

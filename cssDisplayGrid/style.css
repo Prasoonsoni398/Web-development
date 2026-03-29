@@ -1,0 +1,24 @@
+#outerDiv{
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
+    background-color: blue;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 18px 18px 10px 0 rgb(102, 102, 231);
+}
+.innerDiv{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 3px solid black;
+    box-shadow: 12px 10px 10px 0 rgb(61, 111, 192);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
