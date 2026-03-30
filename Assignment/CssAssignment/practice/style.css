@@ -71,10 +71,18 @@ body {
 .checkboxDiv div span{
     padding-left: 10px;
 }
+.checkboxDiv a{
+    text-decoration: none;
+    color: #1124d7;
+}
 .account{
     text-align: center;
     font-size: 14px;
     padding: 0;
+}
+.account a{
+    text-decoration: none;
+    color: #1124d7;
 }
 .logintext{
     font-size: 20px;
