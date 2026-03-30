@@ -44,7 +44,7 @@ input{
     border-radius: 8px;
 }
 .checkboxDiv{
-    width: 300px;
+    width: 280px;
     display: flex;
     justify-content: space-between;
 }
@@ -74,4 +74,10 @@ input{
 span p{
     border-bottom: 3px solid #0823ed;
     border-radius: 2px;
+}
+.account span {
+    padding-left: 20px;
+}
+.createaccount p{
+    padding-left: 20px;
 }
