@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #b9ddec;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+#loginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 30px;
+    gap: 20px;
+    width: 23%;
+}
+
+.logo {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+
+    img {
+        height: 100px;
+        padding-right: 20px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 25px;
+        color: black;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.input-field {
+    display: grid;
+
+    input {
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding-left: 15px;
+        font-size: 16px;
+    }
+}
+
+.checkbox-div {
+    display: flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        color: blueviolet;
+    }
+}
+
+.button {
+    button {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: none;
+        background-color: blueviolet;
+        color: white;
+        box-shadow: 2px 2px 2px 0 gray;
+        transition: transform 0.1s linear 0;
+        .a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+    }
+    button:active{
+        box-shadow: none;
+        transform: translate(2px 2px);
+    }
+}
+
+
+.os {
+    display: flex;
+    gap: 20px;
+
+    .os-button {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+}
+
+.continue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+
+    hr {
+        width: 20%;
+    }
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 10px;
+    a{
+        text-decoration: none;
+        color: blueviolet;
+    }
+}

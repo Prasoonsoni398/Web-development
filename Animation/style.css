@@ -1,0 +1,29 @@
+#div1 {
+    width: 40px;
+    border: 1px solid #000;
+    height: 20px;
+    overflow: hidden;
+    text-wrap-mode: nowrap;
+    padding-left: 5px;
+    color: aqua;
+    transition: width 3s linear 1s, color 2s linear 2s;
+}
+
+#div1:hover {
+    width: 380px;
+    color: blue;
+    /* transition: width 3s linear 1s; */
+}
+
+#div2 {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: auto;
+    color: red;
+    transition: transform 2s linear;
+}
+
+#div2:hover {
+    transform: scale(1.5, 1.2) rotatex(180deg) skew(30deg) translate(300px);
+}
