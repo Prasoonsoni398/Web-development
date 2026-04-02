@@ -10,7 +10,8 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    color: gray;
+    color: rgb(107, 103, 103);
+    animation: fadeIn 2s ease;
 }
 
 #loginDiv {
@@ -20,8 +21,21 @@ body {
     background-color: #fff;
     border-radius: 20px;
     padding: 20px 30px;
-    gap: 20px;
+    gap: 15px;
     width: 23%;
+    box-shadow: 5px 5px 3px 0 gray;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -29,41 +43,61 @@ body {
     gap: 15px;
     justify-items: center;
     align-items: center;
+    position: relative;
+    animation: head 1.5s 2s linear alternate infinite;
 
     img {
         height: 100px;
         padding-right: 20px;
     }
-
-    h3 {
-        text-align: center;
-        font-size: 25px;
-        color: black;
-    }
-
-    p {
-        font-size: 14px;
-    }
 }
+
+@keyframes head {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+
 
 .input-field {
     display: grid;
 
     input {
-        height: 40px;
-        border: 1px solid gray;
+        height: 37px;
+        border: 1px solid rgb(210, 203, 203);
         border-radius: 8px;
         padding-left: 15px;
         font-size: 16px;
+    }
+
+    input:focus {
+        outline-color: blueviolet;
     }
 }
 
 .checkbox-div {
     display: flex;
     justify-content: space-between;
-    a{
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    a {
         text-decoration: none;
         color: blueviolet;
+    }
+
+    input {
+        accent-color: blueviolet;
     }
 }
 
@@ -76,16 +110,18 @@ body {
         background-color: blueviolet;
         color: white;
         box-shadow: 2px 2px 2px 0 gray;
-        transition: transform 0.1s linear 0;
+        transition: transform 0.2s linear 0;
+
         .a {
             text-decoration: none;
             color: white;
             font-size: 16px;
         }
     }
-    button:active{
+
+    button:active {
         box-shadow: none;
-        transform: translate(2px 2px);
+        transform: translate(2px, 2px);
     }
 }
 
@@ -128,8 +164,54 @@ body {
     justify-content: center;
     gap: 5px;
     padding-bottom: 10px;
-    a{
+
+    a {
         text-decoration: none;
         color: blueviolet;
+    }
+}
+
+.registerdiv {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px 30px;
+    gap: 10px;
+    width: 23%;
+    box-shadow: 5px 5px 3px 0 gray;
+}
+
+.welcome {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    h3 {
+        color: black;
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.terms {
+    display: flex;
+    gap: 10px;
+    justify-content: baseline;
+    padding: 5px 0;
+
+    p {
+        font-size: 13px;
+    }
+
+    span {
+        color: blueviolet;
+    }
+
+    input {
+        accent-color: blueviolet;
     }
 }
