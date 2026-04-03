@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Navbar {
+    background-color: rgb(180, 180, 236);
+    display: flex;
+    justify-content: space-between;
+    color: rgb(8, 0, 255);
+    padding: 8px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+
+.NavLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    span,
+    p,
+    button {
+        cursor: pointer;
+    }
+
+    button {
+        padding: 5px 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: blue;
+        color: white;
+    }
+}
+
+
+
+#outerDiv {
+    display: flex;
+    gap: 10px;
+    padding: 20px 15px;
+}
+
+#leftPart {
+    height: fit-content;
+    width: 70%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    border: none;
+    background-color: #f3eebe;
+    border-radius: 15px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px;
+    background-color: #e30e0e;
+}
+
+#rightPart {
+    height: 83vh;
+    padding: 20px;
+    width: 30%;
+    border: none;
+    background-color: #f3eebe;
+    border-radius: 15px;
+
+    ol {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #leftPart {
+        grid-template-columns: auto auto auto;
+        background-color: #f3d7be;
+
+        .card {
+            background-color: rgb(195, 0, 255);
+            color: white;
+        }
+    }
+
+    #rightPart {
+        background-color: #f3d7be;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #leftPart {
+        grid-template-columns: auto auto;
+        background-color: #bee0f3;
+        width: 50%;
+    }
+
+    #rightPart {
+        background-color: #bee0f3;
+        width: 50%;
+    }
+
+    .card {
+        background-color: rgb(59, 35, 200);
+        color: white;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #leftPart {
+        grid-template-columns: auto;
+        background-color: #f3beee;
+    }
+
+    #rightPart {
+        background-color: #f3beee;
+    }
+
+    .card {
+        background-color: rgb(255, 0, 25);
+        color: white;
+    }
+}

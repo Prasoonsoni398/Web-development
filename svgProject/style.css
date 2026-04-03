@@ -127,6 +127,7 @@ header {
 
         .main {
             letter-spacing: -3.1px;
+
             span {
                 font-weight: 600;
             }
@@ -142,26 +143,138 @@ header {
 
 
         .description {
-            padding-top:15.1px;    
+            padding-top: 15.1px;
+
             p {
                 font-size: 25px;
                 color: #747474;
             }
         }
-        
-        button{
-            padding: 17px 28px;
+
+        button {
+            padding: 16px 24px;
+            margin: 16px 0 0;
             border: none;
             border-radius: 30px;
             color: white;
-            font-size: 18px;
-            letter-spacing: -1px;
+            font-size: 17.5px;
         }
-        .shopping{
+
+        .shopping {
             background-color: #6BB252;
         }
-        .join{
-            background-color: black;
+
+        .join {
+            background-color: #212529;
         }
+
+        .reviewDiv {
+            position: absolute;
+            padding-top: 50px;
+            display: flex;
+            gap: 35px;
+
+            .review {
+                display: flex;
+                gap: 30px;
+
+                h5 {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.service-div {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    bottom: 4px;
+    margin: 0 20px;
+
+
+    .service {
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        color: white;
+    }
+
+    svg {
+        height: 60px;
+        width: 60px;
+    }
+
+    .s1 {
+        background-color: #6BB252;
+    }
+
+    .s2 {
+        background-color: #364127;
+    }
+
+    .s3 {
+        background-color: #F95F09;
+    }
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin-bottom: 48px;
+}
+
+.main-category {
+    display: grid;
+    margin: 0 30px;
+    padding: 48px 0;
+}
+
+.main-button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .view-all {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #6BB252;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .swiper-div{
+        button{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+.variety {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.img-div {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+
+    img {
+        border-radius: 50%;
+        margin:0 15px;
     }
 }
