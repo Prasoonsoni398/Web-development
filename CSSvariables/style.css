@@ -1,0 +1,51 @@
+:root{
+    --primary-color: rgb(28, 203, 31);
+    --secondary-color:blueviolet;
+    --text-color: green;
+}
+
+button {
+    padding: 15px 50px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 5px 5px 2px 0 gray;
+    transition: transform 0.1s linear ;
+}
+button:hover{
+    /* box-shadow: 4px 4px 2px 0 gray; */
+    transform: translate(5px, 5px);
+}
+.button{
+    display: flex;
+    gap: 100px;
+}
+
+.login {
+    background-color: var(--primary-color);
+}
+
+.register {
+    background-color: var( --secondary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+h3 {
+    color: var( --secondary-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+th {
+    color: var(--primary-color);
+}
+
+td {
+    color: var( --text-color);
+}

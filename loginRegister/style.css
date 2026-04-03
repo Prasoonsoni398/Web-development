@@ -24,6 +24,11 @@ body {
     gap: 15px;
     width: 23%;
     box-shadow: 5px 5px 3px 0 gray;
+    transition: transform 0.3s linear;
+}
+
+#loginDiv:hover {
+    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
@@ -53,15 +58,17 @@ body {
 }
 
 @keyframes head {
-  0% {
-    transform: translateX(-50px);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(50px);
-  }
+    0% {
+        transform: translateX(-50px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(50px);
+    }
 }
 
 
@@ -180,6 +187,11 @@ body {
     gap: 10px;
     width: 23%;
     box-shadow: 5px 5px 3px 0 gray;
+    transition: transform 0.3s linear;
+}
+
+.registerdiv:hover {
+    transform: scale(1.05);
 }
 
 .welcome {
