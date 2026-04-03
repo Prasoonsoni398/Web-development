@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./logo.svg" alt="Logo" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="25"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+        <div class="headerSearch">
+          <select name="category" id="category">
+            <option value="">All Categories</option>
+            <option value="Groceries">Groceries</option>
+            <option value="drinks">Drinks</option>
+            <option value="chocolates">Chocolates</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Search for more than 20,000 products"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="19"
+            height="19"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="navLinks">
+        <a href="./index.html">HOME</a>
+        <select name="pages">
+          <option value="">PAGES</option>
+          <option value="aboutUs">ABOUT US</option>
+          <option value="shop">SHOP</option>
+          <option value="Cart">CART</option>
+          <option value="checkout">Checkout</option>
+          <option value="blog">SINGLE POST</option>
+          <option value="styles">STYLES</option>
+          <option value="contact">CONTACT</option>
+          <option value="thankyou">THANK YOU</option>
+          <option value="myAccount">MY ACCOUNT</option>
+        </select>
+      </div>
+      <div class="navIcons">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-circle"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+            <path
+              fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+            />
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bookmark-dash"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.5 6.5A.5.5 0 0 1 6 6h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"
+            />
+            <path
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"
+            />
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bag-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="herosection">
+          <img src="./banner-1.jpg" alt="herosection-Image" />
+          <div class="heading">
+            <div class="main">
+              <p><span class="organic">Organic </span>Foods at</p>
+              <p class="p">your <span>Doorsteps</span></p>
+            </div>
+            <div class="description">
+              <p>Dignissim massa diam elementum.</p>
+            </div>
+            <div class="button">
+                <button class="shopping">
+                    START SHOPPING
+                </button>
+                <button class="join">
+                    JOIN NOW
+                </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
