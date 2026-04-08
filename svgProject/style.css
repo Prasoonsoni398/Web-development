@@ -160,12 +160,22 @@ header {
             font-size: 17.5px;
         }
 
+
         .shopping {
             background-color: #6BB252;
         }
 
+        .shopping:hover {
+            background-color: #eb9927;
+        }
+
+
         .join {
             background-color: #212529;
+        }
+
+        .join:hover {
+            background-color: #504e4e;
         }
 
         .reviewDiv {
@@ -188,6 +198,10 @@ header {
             }
         }
     }
+}
+
+.button:hover {
+    background-color: #eb9927;
 }
 
 .service-div {
@@ -244,22 +258,24 @@ header {
     justify-content: center;
     gap: 10px;
 
-    .view-all {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        background-color: #6BB252;
-        a{
-            text-decoration: none;
-            color: white;
-        }
-    }
-    .swiper-div{
-        button{
+    .swiper-div {
+        button {
             padding: 10px 15px;
             border: none;
             border-radius: 10px;
         }
+    }
+}
+
+.view-all {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6BB252;
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 }
 
@@ -275,6 +291,92 @@ header {
 
     img {
         border-radius: 50%;
-        margin:0 15px;
+        margin: 0 15px;
+    }
+}
+
+.sell {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 50px 50px;
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.sellMain {
+    display: flex;
+    margin: 0 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product {
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.product:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgb(240, 235, 235);
+
+    .addCart {
+        opacity: 1;
+    }
+}
+
+.price {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+    span {
+        text-decoration: line-through;
+        color: #747474;
+    }
+
+    p {
+        border: 1px solid #5c5a5a;
+        color: #747474;
+        padding: 2px 3px;
+        font-size: 12.8px;
+    }
+}
+
+.rating {
+    i {
+        color: #FFC107;
+    }
+
+}
+
+.addCart {
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+
+    input {
+        width: 35px;
+        border: 1px solid gray;
+        color: gray;
+        border-radius: 5px;
+        padding: 8px 0;
+        padding-left: 8px;
+    }
+
+    button {
+        color: white;
+        margin: 0 8px;
+    }
+
+    .heart {
+        border: 1px solid #000000;
+        padding: 8px 8px;
+        border-radius: 5px;
     }
 }
