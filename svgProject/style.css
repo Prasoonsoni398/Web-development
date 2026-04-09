@@ -380,3 +380,52 @@ header {
         border-radius: 5px;
     }
 }
+
+.offers {
+    margin: 20px 30px;
+    position: relative;
+}
+
+.banner1 img {
+    height: 450px;
+}
+
+.banner1 .inner1 {
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    color: white;
+}
+
+.banner1 .inner1 p, .shop {
+    padding: 15px 0;
+}
+.shop {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.shop hr {
+    width: 75px;
+    height: 2px;
+    background-color: rgb(141, 136, 136);
+    border: none;
+    position: relative;
+}
+
+/* animated line */
+.shop hr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    transition: width 0.5s ease;
+}
+
+/* hover effect */
+.shop:hover hr::after {
+    width: 100%;
+}
