@@ -11,30 +11,77 @@
     --color-error: #ef4444;
     --color-success: #22c55e;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
 }
-header{
+
+header {
     height: 64px;
     background-color: var(--color-primary);
     position: sticky;
     top: 0;
     z-index: 99;
-    img{
+
+    img {
         height: 56px;
         width: 86px;
     }
-    .register{
+
+    .login:hover {
+        border: 1px solid var(--color-primary-content);
+    }
+
+    .register {
         color: var(--color-primary);
-        font-size: 14px;
+        background-color: var(--color-primary-content);
+    }
+
+    .register:hover {
+        background-color: transparent;
+        border: 1px solid var(--color-primary-content);
+        color: var(--color-primary-content);
+    }
+}
+
+.herosection {
+    position: relative;
+
+    img {
+        height: 620px;
+    }
+}
+
+.herocontent {
+    position: absolute;
+    top: 25%;
+
+    .signUp {
+        background-color: var(--color-primary);
+        color: var(--color-primary-content);
+    }
+
+    .orderNow {
+        background-color: var(--color-primary-content);
+        color: var(--color-base-content);
+    }
+
+    .search {
+        color: var(--color-base-content);
+        background-color: var(--color-primary-content);
+        width: 60%;
+    }
+
+    .menuSearch::placeholder {
+        color: var(--color-primary);
+        opacity: 0.5;
 
     }
 }
-.herosection{
-    img{
-        height: 600px;
-    }
-    
+
+.restaurant5 {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-content));
+    height: 500px;
 }

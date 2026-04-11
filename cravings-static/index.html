@@ -11,6 +11,10 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <header>
@@ -21,53 +25,107 @@
           <img src="./images/transparentLogoLight-De2Z7I01.png" alt="Logo" />
         </div>
         <div class="loginRegister">
-          <a href="./login.html" class="btn text-white">Login</a>
-          <a
-            href="./register.html"
-            class="register btn bg-white px-3 py-1 rounded"
-            >Register</a
-          >
+          <a href="./login.html" class="login btn text-white">Login</a>
+          <a href="./register.html" class="register btn">Register</a>
         </div>
       </div>
     </header>
     <main>
-      <div class="herosection">
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./images/bgImage1-BgVBBcls.jpg" class="d-block w-100" alt="..." />
+      <!-- HeroSection -->
+      <section>
+        <div class="herosection">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./images/bgImage1-BgVBBcls.jpg"
+                  class="d-lg-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/bgImage2-CSvQeVNX.jpg"
+                  class="d-flex w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/bgImage3-BTY6Sz_K.jpg"
+                  class="d-flex w-100"
+                  alt="..."
+                />
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="./images/bgImage2-CSvQeVNX.jpg" class="d-block w-100" alt="..." />
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="w-100 herocontent d-grid justify-content-center">
+            <div class="text-center text-white d-grid gap-1 vw-100">
+              <h1 class="fw-bold display-5 md:h1">
+                Your Favourite Food, <br />Delivered Fast
+              </h1>
+              <p
+                class="fw-bold fs-6 md:fw-normal fs-normal md:d-flex flex-wrap"
+              >
+                Order from thousands of restaurants and get it delivered to your
+                doorstep
+              </p>
+              <div class="herolinks">
+                <a href="./register.html" class="signUp btn px-4 py-2 mx-4"
+                  >Sign Up</a
+                >
+                <a href="./order-now.html" class="orderNow btn px-4 py-2"
+                  >Order Now</a
+                >
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="./images/bgImage3-BTY6Sz_K.jpg" class="d-block w-100" alt="..." />
+            <div class=" d-flex justify-content-center">
+              <div
+              class="search d-flex border rounded mt-4 d-lg-flex align-items-center p-1 mt-5 "
+            >
+              <i class="bi bi-search fw-bold ps-2"></i>
+              <input
+                type="text"
+                name="menuSearch"
+                id="menuSearch"
+                class="menuSearch form-control bg-transparent border border-0 shadow-none"
+                placeholder="Search restaurants or dishes..."
+              />
+            </div>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
+      </section>
+
+      <section class="restaurant5 py-4 md:py-5"></section>
     </main>
 
     <!-- BootStrap Link -->
