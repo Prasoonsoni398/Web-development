@@ -30,16 +30,16 @@ header {
         width: 86px;
     }
 
-    .login:hover {
+    #login:hover {
         border: 1px solid var(--color-primary-content);
     }
 
-    .register {
+    #register {
         color: var(--color-primary);
         background-color: var(--color-primary-content);
     }
 
-    .register:hover {
+    #register:hover {
         background-color: transparent;
         border: 1px solid var(--color-primary-content);
         color: var(--color-primary-content);
@@ -52,18 +52,22 @@ header {
     img {
         height: 620px;
     }
+
+    .dull-img {
+        filter: brightness(60%);
+    }
 }
 
 .herocontent {
     position: absolute;
     top: 25%;
 
-    .signUp {
+    #signUp {
         background-color: var(--color-primary);
         color: var(--color-primary-content);
     }
 
-    .orderNow {
+    #orderNow {
         background-color: var(--color-primary-content);
         color: var(--color-base-content);
     }
@@ -81,7 +85,74 @@ header {
     }
 }
 
-.restaurant5 {
+.restaurant-card {
     background: linear-gradient(180deg, var(--color-primary), var(--color-primary-content));
-    height: 500px;
+
+    .restaurant-div {
+        margin: 0 13%;
+        .card-heading {
+            color: var(--color-primary-content);
+        }
+
+        .restaurant-available {
+            color: var(--color-base-200);
+            opacity: 0.8;
+        }
+        p{
+            font-size: 14px;
+            color: var(--color-base-content);
+        }
+        hr{
+            opacity: 0.1;
+        }
+        .star{
+            top: 10%;
+            right: 10%;
+            background-color: var(--color-primary);
+            color: var(--color-primary-content);
+        }
+    }
+    .card-outer{
+        grid-template-columns: auto auto auto;
+    }
+    @media (max-width:992px){
+        .card-outer{
+            margin: 0 8%;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    @media (max-width:420px){
+        .card-outer{
+            margin: 0 3%;
+            display: grid;
+            grid-template-columns: auto;
+        }
+    }
+
+    .card {
+        background-color: var(--color-base-100);
+        transition: transform 0.1s linear;
+        box-shadow: 0 0 5px 0 gray;
+        img{
+            height: 180px;
+        }
+       
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+
+    #explore {
+        background-color: var(--color-primary);
+        color: var(--color-primary-content);
+    }
+
+    .dishes{
+        span {
+        background-color: var(--color-base-300);
+        color: var(--color-neutral);
+        font-size: 14px;
+    }
+    }
 }
