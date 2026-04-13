@@ -102,7 +102,9 @@
                 Order from thousands of restaurants and get it delivered to your
                 doorstep
               </p>
-              <div class="herolinks">
+              <div
+                class="herolinks d-flex flex-wrap gap-2 justify-content-center"
+              >
                 <a href="./register.html" class="btn px-4 py-2 mx-4" id="signUp"
                   >Sign Up</a
                 >
@@ -129,13 +131,14 @@
         </div>
       </section>
 
+      <!-- card Section -->
       <section
         class="restaurant-card py-5 md:py-5 d-flex justify-content-center"
       >
         <div class="restaurant-div px-3">
           <h2 class="card-heading fw-bolder">Featured Restaurants</h2>
           <p class="restaurant-available">6 restaurants available</p>
-          <div class="card-outer d-grid gap-5 mt-4">
+          <div class="card-outer d-grid mt-4">
             <div class="card border-0 rounded-3">
               <div class="image position-relative">
                 <img
@@ -180,7 +183,9 @@
               <div class="description p-3 border-0">
                 <h6 class="fw-bolder">Raj darbar</h6>
                 <p class="">
-                  Raj Darbar is a one-of-a-kind Indian restaurant that offers a unique dining experience for families and friends with a dhaba-style theme.
+                  Raj Darbar is a one-of-a-kind Indian restaurant that offers a
+                  unique dining experience for families and friends with a
+                  dhaba-style theme.
                 </p>
                 <div class="dishes">
                   <span class="rounded py-1 px-2 mx-1">Indian</span>
@@ -208,7 +213,8 @@
               <div class="description p-3 border-0">
                 <h6 class="fw-bolder">Countryside Culture</h6>
                 <p class="">
-                  A hidden gem away from the city, offering lush green meadows and peaceful walking paths for relaxation.
+                  A hidden gem away from the city, offering lush green meadows
+                  and peaceful walking paths for relaxation.
                 </p>
                 <div class="dishes">
                   <span class="rounded py-1 px-2 mx-1">Indian</span>
@@ -311,16 +317,117 @@
         </div>
       </section>
 
-      <section class="details">
-        <div class="trust">
-          <h2>Cravings by the Numbers</h2>
-          <p>See why millions trust us for their daily food delivery needs</p>
+      <!-- Craving by number -->
+      <section class="details py-5">
+        <!-- Heading -->
+        <div class="trust text-center">
+          <h2 class="fw-bold display-6">Cravings by the Numbers</h2>
+          <p class="trust-content fs-5">
+            See why millions trust us for their daily food delivery needs
+          </p>
         </div>
-        <div class="records">
-          <div class="deliveries">
-            <div class="numbers">2.5M+</div>
-            <h3>Successful Deliveries</h3>
-            <p>Orders delivered with care and precision</p>
+
+        <!-- Cards -->
+        <div class="records container">
+          <div class="row my-5 g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="record-cards d-grid place-items-center text-center gap-2 p-4 shadow rounded-2 h-100"
+              >
+                <div class="trust-delivery display-6 display-md-5 fw-bold">
+                  2.5M+
+                </div>
+                <h3 class="fs-5 fw-semibold text-black">
+                  Successful Deliveries
+                </h3>
+                <p class="trust-description">
+                  Orders delivered with care and precision
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="record-cards d-grid place-items-center text-center gap-2 p-4 shadow rounded-2 h-100"
+              >
+                <div class="trust-customer display-6 display-md-5 fw-bold">
+                  500K+
+                </div>
+                <h3 class="fs-5 fw-semibold text-black">Happy Customers</h3>
+                <p class="trust-description">
+                  Satisfied users enjoying delicious food
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="record-cards d-grid place-items-center text-center gap-2 p-4 shadow rounded-2 h-100"
+              >
+                <div class="trust-delivery display-6 display-md-5 fw-bold">
+                  5K+
+                </div>
+                <h3 class="fs-5 fw-semibold text-black">Partner Restaurants</h3>
+                <p class="trust-description">
+                  Restaurants serving amazing cuisine
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="record-cards d-grid place-items-center text-center gap-2 p-4 shadow rounded-2 h-100"
+              >
+                <div class="trust-customer display-6 display-md-5 fw-bold">
+                  1K+
+                </div>
+                <h3 class="fs-5 fw-semibold text-black">
+                  Active Delivery Partners
+                </h3>
+                <p class="trust-description">
+                  Riders ensuring quick and safe delivery
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer review -->
+      <section class="py-5">
+        <h2 class="text-center fw-bold text-black">What Our Customers Say</h2>
+        <p class="feedback text-center">Real feedback from real food lovers</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+              <div class="rating-card d-grid g-4 rounded-2 py-4 ">
+                <div class="d-flex gap-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </div>
+                <h3>Amazing Service!</h3>
+                <p>
+                  "The food arrived hot and fresh. The delivery was incredibly
+                  fast. Highly impressed with Cravings' service!"
+                </p>
+                <div class="review-detail d-flex gap-3">
+                  <div class="review-name-logo rounded-circle p-3">
+                    <b>AJ</b>
+                  </div>
+                  <div class="review-name d-grid ">
+                    <span class="fw-bold">Arjun J.</span>
+                    <span>Verifies Buyer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
