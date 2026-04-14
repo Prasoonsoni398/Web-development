@@ -280,15 +280,22 @@ header {
     }
 }
 
+
 .footer-outer,
 .footer-division,
 .copy-right {
-    margin: 0 10%;
+    margin: 0 9%;
 }
 
-.footer-division,
-.copy-right {
-    width: 80%;
+.footer-outer {
+    grid-template-columns: 190px auto auto auto auto;
+}
+
+@media(max-width:768px) {
+    .footer-outer {
+        grid-template-columns: auto;
+        gap: 30px;
+    }
 }
 
 .footer-logo img {
@@ -296,13 +303,14 @@ header {
     width: 125px;
 }
 
-.nav-link-outer {
+footer {
     a {
         text-decoration: none;
-        color: var(--color-primary-content);
+        color: var(--color-base-100);
         font-size: 14px;
     }
-    h4{
+
+    h4 {
         font-size: 16px;
     }
 
@@ -313,10 +321,42 @@ header {
 
 .copy-right {
     color: var(--color-base-100);
-    
+}
+
+/* Login page */
+.login {
+    top: 10px
+}
+
+.login-bg {
+    img {
+        height: 97vh;
+        width: 100%;
+    }
+}
+
+.login-div {
+    top: 20%;
+    left: 10%;
+    background-color: var(--color-neutral-content);
+
     a {
         text-decoration: none;
-        color: var(--color-base-100);
-        font-size: 14px;
+        color: var(--color-primary);
     }
+
+    button {
+        background-color: var(--color-primary);
+    }
+    h2{
+        color: var(--color-primary);
+    }
+}
+
+
+.input-field {
+    height: 35px;
+    border: 0.5px solid rgb(236, 228, 228);
+
+    border-radius: 5px;
 }
