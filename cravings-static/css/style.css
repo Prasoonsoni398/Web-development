@@ -16,7 +16,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", ;
 }
 
 header {
@@ -111,8 +111,8 @@ header {
         }
 
         .star {
-            top: 10%;
-            right: 10%;
+            top: 5%;
+            right: 3%;
             background-color: var(--color-primary);
             color: var(--color-primary-content);
         }
@@ -120,7 +120,7 @@ header {
 
     .card-outer {
         grid-template-columns: auto auto auto;
-        gap: 48px;
+        gap: 30px;
     }
 
     .dishes {
@@ -288,7 +288,7 @@ header {
 }
 
 .footer-outer {
-    grid-template-columns: 190px auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 @media(max-width:768px) {
@@ -325,38 +325,84 @@ footer {
 
 /* Login page */
 .login {
-    top: 10px
+    /* top: 10px */
 }
 
 .login-bg {
     img {
-        height: 97vh;
+        height: 90vh;
         width: 100%;
     }
 }
 
 .login-div {
-    top: 20%;
-    left: 10%;
+    left: 8%;
+    top: 13%;
+}
+
+.login-div,
+.register-div {
+    padding: 23px 39px !important;
+    width: 29.5%;
     background-color: var(--color-neutral-content);
 
     a {
         text-decoration: none;
         color: var(--color-primary);
+        font-size: 13px;
+    }
+
+    hr {
+        width: 29%;
+    }
+
+    p,
+    .line,
+    i,
+    .remember,
+    .terms {
+        color: var(--color-secondary);
+
     }
 
     button {
         background-color: var(--color-primary);
+
     }
-    h2{
+
+    h2,
+    #anchor-underline {
         color: var(--color-primary);
     }
 }
 
 
 .input-field {
-    height: 35px;
-    border: 0.5px solid rgb(236, 228, 228);
-
+    height: 37px;
+    border: 0.5px solid var(--color-base-300) !important;
     border-radius: 5px;
+}
+
+.input-field::placeholder,
+.input-field input::placeholder {
+    font-size: 14px;
+}
+
+/* Register */
+.register-div {
+    right: 8% !important;
+    top: 3%;
+}
+
+#anchor-underline:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    font-size: 14px;
+}
+
+#register-button,
+#login-button {
+    font-size: 16px;
 }

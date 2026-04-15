@@ -36,26 +36,40 @@
         </div>
       </div>
     </header>
-    <main class="">
-      <div class="position-absolute login w-100">
+    <main>
+      <div class="position-relative login w-100 h-100">
         <div class="login-bg">
-          <img src="./images/foodTable.webp" alt="FoodTable" class="" />
+          <img
+            src="./images/foodTable.webp"
+            alt="FoodTable"
+            class="object-fit-cover"
+          />
         </div>
-        <div class="login-div card p-4 w-25 d-grid position-absolute">
-          <h2 class="text-center fw-bold">Welcome Back</h2>
+        <div class="login-div card d-grid position-absolute">
+          <h2 class="text-center fw-bolder">Welcome Back</h2>
           <p class="text-center">Login to your Cravings account</p>
           <div class="login-input d-grid gap-1 mb-4">
-            <span>Email</span>
-            <input type="email" class="input-field form-control shadow-none" />
+            <span class="fw-semibold">Email</span>
+            <input
+              type="email"
+              class="input-field form-control shadow-none"
+              placeholder="Enter your Email"
+            />
           </div>
           <div class="login-input d-grid gap-1 mb-4">
-            <span>Password</span>
-            <div class="d-flex align-items-center px-3 input-field pb">
-              <input type="password" class="form-control shadow-none bg-transparent border-0" />
+            <span class="fw-semibold">Password</span>
+            <div class="d-flex align-items-center pe-3 input-field pb">
+              <input
+                type="password"
+                class="form-control shadow-none bg-transparent border-0"
+                placeholder="Enter your password"
+              />
               <i class="bi bi-eye-fill"></i>
             </div>
           </div>
-          <div class="remember d-flex justify-content-between">
+          <div
+            class="remember d-flex justify-content-between align-items-center"
+          >
             <div>
               <input type="checkbox" id="remember" />
               <label for="remember">Remember me</label>
@@ -64,17 +78,74 @@
               <a href="">Forgot Password?</a>
             </div>
           </div>
-          <button class="btn w-100 my-3 py-2" type="submit">
-            <a href="">Login</a>
+          <button class="w-100 my-4 py-2 border-0 rounded-2" type="submit">
+            <a href="" class="text-white" id="login-button">Login</a>
           </button>
-          <div class="d-flex align-items-center">
-            <hr class="w-25">
+          <div class="d-flex align-items-center mb-3 line">
+            <hr />
             Don't have account?
-            <hr class="w-25">
+            <hr />
           </div>
-          <a href="./register.html" class="text-center">Create an account</a>
+          <a href="./register.html" class="text-center" id="anchor-underline"
+            ><b>Create an account</b></a
+          >
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <section class="footer-section pt-4 pb-3">
+        <div class="footer-div w-100 mt-2 pb-5">
+          <p class="text-center">
+            --- Your favorite food delivery platform connecting customers with
+            restaurants and riders. ---
+          </p>
+          <div class="footer-outer d-grid pt-4">
+            <div class="footer-logo me-5 d-flex justify-content-center">
+              <img src="./images/circleLogo-DpCri5UD.png" alt="footerLogo" />
+            </div>
+
+            <div class="quick-links d-grid">
+              <h4 class="mb-1 fw-bold">Quick Links</h4>
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About</a>
+              <a href="./order-now.html">Order Now</a>
+            </div>
+
+            <div class="quick-links d-grid">
+              <h4 class="mb-1 fw-bold">For Restaurants</h4>
+              <a href="">Partner With Us</a>
+              <a href="">Restaurant Dashboard</a>
+            </div>
+
+            <div class="quick-links d-grid">
+              <h4 class="mb-1 fw-bold">For Riders</h4>
+              <a href="">Become a Rider</a>
+              <a href="">Rider Dashboard</a>
+            </div>
+
+            <div class="quick-links d-grid">
+              <h4 class="mb-1 fw-bold">Feedback & Support</h4>
+              <a href="">Submit Feedback</a>
+              <a href="">Help Center</a>
+              <a href="">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom footer-division"></div>
+        <div class="copy-right pt-4 d-flex justify-content-between">
+          <div class="d-flex gap-2">
+            <i class="bi bi-c-circle"></i>
+            <p>2026 Cravings. All rights reserved.</p>
+          </div>
+          <div class="d-flex gap-4">
+            <a href="./privacy-policy.html">Privacy Policy</a>
+            <a href="./terms-of-service.html">Terms of Service</a>
+            <a href="./sitemap.html">Site Map</a>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
