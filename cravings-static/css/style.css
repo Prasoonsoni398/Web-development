@@ -347,10 +347,22 @@ footer {
         width: 100%;
     }
 }
+.help-bg {
+    img {
+        height: 92vh;
+        width: 100%;
+    }
+}
 
 .about-login-bg {
     img {
         height: 60vh;
+        width: 100%;
+    }
+}
+.privacy-bg {
+    img {
+        height: 50vh;
         width: 100%;
     }
 }
@@ -501,7 +513,8 @@ footer {
     color: var(--color-primary);
 }
 
-.about-trust-description, .rating-des {
+.about-trust-description,
+.rating-des {
     font-size: 14px;
 }
 
@@ -549,4 +562,17 @@ footer {
 
 .about-rating {
     background-color: var(--color-neutral);
+}
+
+/* Help center */
+.help-center-bg{
+    top: 25%;
+    left: 25%;   
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+
+.privacy-para{
+    font-size: 14px ;
+    color: var(--color-neutral-content);
 }
