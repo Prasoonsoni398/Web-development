@@ -264,7 +264,7 @@ header {
 
 .rating-card,
 #order-now-card,
-.our-story {
+.our-story, .privacy-policy {
     background-color: var(--color-base-100);
 }
 
@@ -347,6 +347,7 @@ footer {
         width: 100%;
     }
 }
+
 .help-bg {
     img {
         height: 92vh;
@@ -360,9 +361,10 @@ footer {
         width: 100%;
     }
 }
+
 .privacy-bg {
     img {
-        height: 50vh;
+        height: 45vh;
         width: 100%;
     }
 }
@@ -422,8 +424,9 @@ footer {
 }
 
 .input-field::placeholder,
-.input-field input::placeholder {
-    font-size: 14px;
+.input-field input::placeholder,
+.updated {
+    font-size: 14px !important;
 }
 
 /* Register */
@@ -543,7 +546,15 @@ footer {
 .about-herocontent {
     top: 26%;
     left: 25%;
+}
 
+.privacy-herocontent {
+    top: 16%;
+    left: 25%;
+}
+
+.about-herocontent,
+.privacy-herocontent {
     img {
         height: 80px;
         width: 80px;
@@ -560,19 +571,37 @@ footer {
     }
 }
 
+.privacy-herocontent .privacy-value {
+    font-size: 16px !important;
+}
+
 .about-rating {
     background-color: var(--color-neutral);
 }
 
 /* Help center */
-.help-center-bg{
+.help-center-bg {
     top: 25%;
-    left: 25%;   
-    background: rgba(0, 0, 0, 0.4); 
+    left: 25%;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 
-.privacy-para{
-    font-size: 14px ;
+.privacy-para {
+    font-size: 14px;
     color: var(--color-neutral-content);
+}
+li{
+    background-color: var(--color-primary-content);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.faq-box{
+    width: 60%;
+}
+ul li::marker {
+  color: var(--color-primary);
+}
+.privacy-input-field{
+    border: 0.5px solid var(--color-base-300) !important;
 }
