@@ -349,12 +349,7 @@ footer {
     }
 }
 
-.help-bg {
-    img {
-        height: 92vh;
-        width: 100%;
-    }
-}
+
 
 .about-login-bg {
     img {
@@ -602,12 +597,6 @@ footer {
     background-color: var(--color-neutral);
 }
 
-/* Help center */
-.help-center-bg {
-    top: 25%;
-    left: 25%;
-    background: rgba(0, 0, 0, 0.4);
-}
 
 /* Privacy */
 
