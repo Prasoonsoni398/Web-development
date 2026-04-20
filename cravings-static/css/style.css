@@ -51,7 +51,7 @@ header {
     position: relative;
 
     img {
-        height: 620px;
+        height: 82vh;
     }
 
 }
@@ -63,15 +63,15 @@ header {
 .about-dull-img {
     filter: brightness(45%);
 }
+#signUp, .submit-ticket {
+    background-color: var(--color-primary);
+    color: var(--color-primary-content);
+}
 
 .herocontent {
     position: absolute;
     top: 25%;
 
-    #signUp {
-        background-color: var(--color-primary);
-        color: var(--color-primary-content);
-    }
 
     #orderNow {
         background-color: var(--color-primary-content);
