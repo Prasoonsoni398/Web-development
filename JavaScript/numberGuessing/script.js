@@ -1,21 +1,43 @@
 let num = Math.floor(Math.random() * 10) + 1;
-let guess;
-guess = Number(prompt(`Guess number (1-10)\nChances left: 5`));
+let chances = 5;
 
-for (let i = 0; i < 5; i++) {
+function checkGuess() {
+  let guess = Number(document.getElementById("guessInput").value);
+  let msg = document.getElementById("message");
+
+  if (chances <= 0) return;
+
+  if (!guess) {
+    msg.innerText = "⚠️ Enter a number!";
+    return;
+  }
 
   if (guess > num) {
-    guess = Number(prompt(`Too high! Try again\nChances left: ${5 - i}`));
+    msg.innerText = "📈 Too high!";
   } 
   else if (guess < num) {
-    guess = Number(prompt(`Too low! Try again\nChances left: ${5 - i}`));
+    msg.innerText = "📉 Too low!";
   } 
   else {
-    prompt("🎉 Congratulations! You won!");
-    break;
+    msg.innerText = "🎉 You won!";
+    msg.style.color = "green";
+    chances = 0;
+    return;
   }
 
-  if (i === 4 && guess!==num) {
-    prompt("❌ Game Over! Number was " + num);
+  chances--;
+  document.getElementById("chances").innerText = "Chances left: " + chances;
+
+  if (chances === 0) {
+    msg.innerText = "❌ Game Over! Number was " + num;
+    msg.style.color = "red";
   }
+}
+
+function resetGame() {
+  num = Math.floor(Math.random() * 10) + 1;
+  chances = 5;
+  document.getElementById("message").innerText = "";
+  document.getElementById("chances").innerText = "Chances left: 5";
+  document.getElementById("guessInput").value = "";
 }

@@ -1,0 +1,25 @@
+body {
+  background: linear-gradient(to right, #2E7D32, #4CAF50);
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.game-card {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: white;
+}
+
+input {
+  text-align: center;
+  font-size: 18px;
+}
