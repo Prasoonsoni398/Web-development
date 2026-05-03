@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-family: Arial;
+  color: white;
+}
+
+.clock-container {
+  text-align: center;
+  background-color: #977f34;
+  padding: 1px 50px;
+  border: none;
+  border-radius: 30px;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: 20px;
+}
