@@ -23,8 +23,14 @@
       <span id="myData"></span>
     </div>
     <div class="container w-full text-center divHide mt-5" id="hideButton">
-        <button  class=" btn btn-primary " onclick="Submit()">Hide Data</button>
+      <button class="btn btn-primary" onclick="Hide(),showAlert()">Hide Data</button>
     </div>
+
+    <div id="customAlert" class="alert-box bg-success text-white p-3 shadow-lg rounded-3">
+      Data is Hidden Successfully ✅
+      <button onclick="closeAlert()" class="bg-white text-primary btn">OK</button>
+    </div>
+
 
     <!-- Script -->
     <script src="script.js"></script>
