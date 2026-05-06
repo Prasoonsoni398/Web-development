@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Assignment</title>
+    <link rel="icon" type="image/png" href="/PrasoonLogo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="mb-5">
+      <h1 class="text-center text-danger-emphasis mt-5 display-3 fw-bolder">Assignments</h1>
+    </div>
+    <div class="container w-100 px-lg-5 px-md-3 px-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 p-lg-4 p-3">
+          <div class="shadow-lg rounded-4 p-3 py-4">
+            <form>
+              <div class="d-grid gap-4">
+                <h2 class="text-primary fw-bold text-center">Assignment 1</h2>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  class="form-control shadow-none"
+                  placeholder="Enter your Full name"
+                />
+                <input
+                  type="text"
+                  name="cityOutput"
+                  id="cityOutput"
+                  class="form-control shadow-none"
+                  placeholder="Enter your city"
+                />
+              </div>
+            </form>
+            <button
+              class="btn btn-primary w-100 rounded-5 mt-4"
+              onclick="Submit()"
+            >
+              SUBMIT
+            </button>
+            <div
+              id="dataCard"
+              class="border border-1 divHide shadow-lg mt-4 p-3 w-100 h-fit rounded-3"
+            >
+              <div>
+                <span>Name:</span>
+                <span id="name" class="text-success"></span>
+              </div>
+              <div>
+                <span>City:</span>
+                <span id="city" class="text-success"></span>
+              </div>
+            </div>
+            <div
+              class=" w-100 text-center divHide  mt-3"
+              id="hideButton"
+            >
+              <button class="btn btn-primary w-100 rounded-pill" onclick="(Hide(), showAlert())">
+                Hide Data
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 p-lg-4 p-3">
+          <div class="shadow-lg rounded-4 p-3 py-4">
+            <form>
+              <div class="d-grid gap-4">
+                <h2 class="text-primary fw-bold text-center">Assignment 2</h2>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control shadow-none"
+                  placeholder="Enter your Full name"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control shadow-none"
+                  placeholder="Enter your city"
+                />
+              </div>
+            </form>
+            <button
+              class="btn btn-primary w-100 rounded-5 mt-4"
+              onclick="Submit()"
+            >
+              SUBMIT
+            </button>
+            <div
+              id="dataCard1"
+              class="border border-1 divHide shadow-lg mt-4 p-3 w-100 h-fit rounded-3"
+            >
+              <div>
+                <span>Name:</span>
+                <span id="useremail"></span>
+              </div>
+              <div>
+                <span>City:</span>
+                <span id="userpassword"></span>
+              </div>
+            </div>
+            <div
+              class=" w-100 text-center divHide  mt-3"
+              id="hideButton1"
+            >
+              <button class="btn btn-primary w-100 rounded-pill" onclick="(Hide(), showAlert())">
+                Hide Data
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 p-lg-4 p-3">
+          <div class="shadow-lg rounded-4 p-3 py-4">
+            <form>
+              <div class="d-grid gap-4">
+                <h2 class="text-primary fw-bold text-center">Assignment 3</h2>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  class="form-control shadow-none"
+                  placeholder="Enter your Full name"
+                />
+                <input
+                  type="text"
+                  name="cityOutput"
+                  id="cityOutput"
+                  class="form-control shadow-none"
+                  placeholder="Enter your city"
+                />
+              </div>
+            </form>
+            <button
+              class="btn btn-primary w-100 rounded-5 mt-4"
+              onclick="Submit()"
+            >
+              SUBMIT
+            </button>
+            <div
+              id="dataCard"
+              class="border border-1 divHide shadow-lg mt-4 p-3 w-100 h-fit rounded-3"
+            >
+              <div>
+                <span>Name:</span>
+                <span id="name"></span>
+              </div>
+              <div>
+                <span>City:</span>
+                <span id="city"></span>
+              </div>
+            </div>
+            <div
+              class=" w-100 text-center divHide  mt-3"
+              id="hideButton"
+            >
+              <button class="btn btn-primary w-100 rounded-pill" onclick="(Hide(), showAlert())">
+                Hide Data
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
