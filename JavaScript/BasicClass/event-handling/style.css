@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #39aae3;
+}
+.inner-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+button{
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+#red{
+    background-color: red;
+    color: white;
+}
+#blue{
+    background-color: blue;
+    color: white;
+}
+#green{
+    background-color: green;
+    color: white;
+}
+#off{
+    background-color: rgb(111, 143, 177);
+    color: white;
+}
+input{
+    margin-top: 30px;
+}
