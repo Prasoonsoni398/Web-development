@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="vh-100 w-100 d-flex justify-content-center align-items-center bg-primary-subtle" >
+        <div class="d-flex border border-2 w-75 border-black rounded-2">
+            <div class="w-75 border border-2 border-black p-5" id="changeColor">
+                <h1 id="heading">This is heading</h1>
+                <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum reprehenderit quibusdam exercitationem cumque eveniet! Necessitatibus minima qui quis expedita ullam ducimus rerum magnam nulla odio, beatae fuga laborum velit delectus vitae atque explicabo, eligendi quam modi consectetur, et magni dolor voluptate. Blanditiis est eveniet atque sequi quaerat esse facilis cum.</p>
+            </div>
+            <div class="border border-2 border-black w-25 p-4 d-grid align-items-start gap-3" id="bg-color1">
+                <div class="d-flex gap-3 justify-content-between">
+                    <p>Background Color</p>
+                    <input type="color" id="bgColor" class="form-control form-control-color rounded-circle p-0 border-0"style="height: 35px; width: 35px;" value="#2E7D32">
+                </div>
+                <div class="d-flex gap-3 justify-content-between">
+                    <p>Heading Color</p>
+                    <input type="color" class="form-control form-control-color rounded-circle p-0 border-0" id="headingColor" style="height: 35px; width: 35px;" value="#175CDD">
+                </div>
+                <div class="d-flex gap-3 justify-content-between">
+                    <p>Paragraph Color</p>
+                    <input type="color" id="paraColor"class="form-control form-control-color rounded-circle p-0 border-0"style="height: 35px; width: 35px;" value="#FF6B00">
+                </div>
+                <button id="reset" class="rounded-5 bg-primary border-0 py-2 text-white " onclick="reset()">Reset</button>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="script2.js"></script>
+</body>
+</html>
