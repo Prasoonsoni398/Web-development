@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #39aae3;
+}
+.inner-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.box{
+    margin-top: 30px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+}
+.box1{
+    margin-top: 30px;
+    height: 50px;
+    width: 80px;
+    border: none;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: yellow;
+}
+#parentbox{
+    display: flex;
+    gap: 30px;
+}
+
+#redbox{
+    background-color: red;
+    color: white;
+}
+#bluebox{
+    background-color: blue;
+    color: white;
+}
+#greenbox{
+    background-color: green;
+    color: white;
+}
+
