@@ -1,0 +1,24 @@
+#bg-calci {
+    width: 100%; 
+    max-width: 380px; 
+    max-height: 550px;
+}
+
+#output-div {
+    max-height: 150px;
+}
+
+#calci {
+    grid-template-columns: repeat(4, 1fr);
+      
+}
+
+button{
+    height: 60px;
+    width: 60px;
+}
+.equal-btn {
+  grid-column: span 2;
+  height: 55px ;
+  width: 140px ;
+}

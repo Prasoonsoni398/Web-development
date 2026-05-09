@@ -1,9 +1,9 @@
 function updateClock() {
   let now = new Date();
 
-  let hours = String(now.getHours()).padStart(2, '0');
-  let minutes = String(now.getMinutes()).padStart(2, '0');
-  let seconds = String(now.getSeconds()).padStart(2, '0');
+  let hours = String(now.getHours())
+  let minutes = String(now.getMinutes())
+  let seconds = String(now.getSeconds())
 
   let time = `${hours}:${minutes}:${seconds}`;
 
@@ -13,5 +13,5 @@ function updateClock() {
   document.getElementById("date").innerText = date;
 }
 
-setInterval(updateClock, 1000);
+setInterval(updateClock);
 updateClock();

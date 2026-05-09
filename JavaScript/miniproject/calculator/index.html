@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Calculator</title>
+
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <img
+        src="./bg-image.png"
+        alt="bg-image"
+        class="vh-100 vw-100 object-fit-cover position-fixed top-0 start-0"
+      />
+    </div>
+
+    <div
+      class="position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center px-3"
+    >
+      <div
+        class="position-relative shadow-lg rounded-5 overflow-hidden"
+        id="bg-calci"
+      >
+        <img
+          src="./cali-bg.png"
+          alt="calculator"
+          class="img-fluid w-100 h-100 object-fit-cover"
+        />
+
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 p-2 d-grid gap-2"
+        >
+          <input
+            type="text"
+            id="output-div"
+            value="0"
+            class="rounded-top-5 p-3 border border-2 border-dark-subtle bg-success-subtle fs-4 text-end overflow-auto w-100"
+            pattern="[0-9]{10}"
+            oninput="this.value = this.value.replace(/[^0-9+\-*/.%]/g, '')"
+          />
+
+          <div
+            class="border border-2 border-dark-subtle bg-danger-subtle rounded-bottom-5 ps-4 pt-3 d-grid"
+            id="calci"
+          >
+            <button class="btn btn-light rounded-circle">AC</button>
+            <button class="btn btn-light rounded-circle">C</button>
+            <button class="btn btn-light rounded-circle">%</button>
+            <button class="btn btn-warning rounded-circle">/</button>
+
+            <button class="btn btn-light rounded-circle">7</button>
+            <button class="btn btn-light rounded-circle">8</button>
+            <button class="btn btn-light rounded-circle">9</button>
+            <button class="btn btn-warning rounded-circle">*</button>
+
+            <button class="btn btn-light rounded-circle">4</button>
+            <button class="btn btn-light rounded-circle">5</button>
+            <button class="btn btn-light rounded-circle">6</button>
+            <button class="btn btn-warning rounded-circle">-</button>
+
+            <button class="btn btn-light rounded-circle">1</button>
+            <button class="btn btn-light rounded-circle">2</button>
+            <button class="btn btn-light rounded-circle">3</button>
+            <button class="btn btn-warning rounded-circle">+</button>
+
+            <button class="btn btn-light rounded-circle">0</button>
+            <button class="btn btn-light rounded-circle">.</button>
+            <button class="btn btn-success rounded-pill fs-3 equal-btn mt-1">
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
