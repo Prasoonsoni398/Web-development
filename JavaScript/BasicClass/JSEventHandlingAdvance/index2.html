@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Responsive Form</title>
+
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+  </head>
+
+  <body class="bg-light">
+    <form
+      class="min-vh-100 d-flex justify-content-center align-items-center p-3"
+    >
+      <div
+        class="bg-success-subtle border rounded-4 p-4 d-grid gap-4 w-100"
+        style="max-width: 550px"
+      >
+        <h2 class="text-center">Registration Form</h2>
+
+        <div class="d-grid d-md-flex align-items-md-center gap-2">
+          <label for="FullName" class="fw-semibold" style="min-width: 120px">
+            Full Name:
+          </label>
+
+          <input
+            type="text"
+            name="FullName"
+            id="FullName"
+            class="form-control"
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="d-grid d-md-flex align-items-md-center gap-2">
+          <label for="email" class="fw-semibold" style="min-width: 120px">
+            Email:
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div class="d-grid d-md-flex align-items-md-center gap-2">
+          <label for="password" class="fw-semibold" style="min-width: 120px">
+            Password:
+          </label>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter password"
+          />
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+        >
+          <button type="submit" class="btn btn-success rounded-pill px-4">
+            Submit
+          </button>
+
+          <button type="reset" class="btn btn-danger rounded-pill px-4">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
