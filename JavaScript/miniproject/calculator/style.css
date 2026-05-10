@@ -1,7 +1,7 @@
 #bg-calci {
     width: 100%; 
     max-width: 380px; 
-    max-height: 550px;
+    height: 550px;
 }
 
 #output-div {
@@ -9,7 +9,7 @@
 }
 
 #calci {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto auto auto auto;
       
 }
 

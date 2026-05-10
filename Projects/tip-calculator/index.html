@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+
+    <link rel="shortcut icon" href="/PrasoonLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div>
+      <img src="./image.png" alt="bg-image" class="vw-100 vh-100" />
+    </div>
+    <div
+      class="w-25 bg-danger-subtle position-absolute top-50 start-50 translate-middle rounded-2 p-4 d-flex flex-column gap-3"
+    >
+      <h1 class="bg-success-subtle text-center text-uppercase p-2">
+        Tip Calculator
+      </h1>
+
+      <label for="amount">Bill Amount</label>
+      <div class="d-flex gap-3">
+        <input
+          type="text"
+          placeholder="Amount to be paid"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          class="form-control bg-transparent border border-1 border-primary border-top-0 border-start-0 border-end-0 rounded-0 shadow-none"
+        />
+        <span class="fs-4"> ₹</span>
+      </div>
+
+      <label for="service">How was the service?</label>
+
+      <select
+        name="service"
+        id="service"
+        class="bg-transparent shadow-none border-0 p-2 border-bottom border-primary"
+      >
+        <option value="">25% - Top Notch</option>
+        <option value="">20% - Excellent</option>
+        <option value="">15% - Top Notch</option>
+        <option value="">10% - Top Notch</option>
+        <option value="">5% - Top Notch</option>
+        
+      </select>
+    </div>
+  </body>
+</html>
