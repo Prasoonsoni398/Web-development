@@ -8,17 +8,15 @@ function checkGuess() {
   if (chances <= 0) return;
 
   if (!guess) {
-    msg.innerText = "⚠️ Enter a number!";
+    msg.innerText = " Enter a number!";
     return;
   }
 
   if (guess > num) {
-    msg.innerText = "📈 Too high!";
-  } 
-  else if (guess < num) {
-    msg.innerText = "📉 Too low!";
-  } 
-  else {
+    msg.innerText = " Too high!";
+  } else if (guess < num) {
+    msg.innerText = " Too low!";
+  } else {
     msg.innerText = "🎉 You won!";
     msg.style.color = "green";
     chances = 0;
@@ -29,7 +27,7 @@ function checkGuess() {
   document.getElementById("chances").innerText = "Chances left: " + chances;
 
   if (chances === 0) {
-    msg.innerText = "❌ Game Over! Number was " + num;
+    msg.innerText = " Game Over! Number was " + num;
     msg.style.color = "red";
   }
 }
