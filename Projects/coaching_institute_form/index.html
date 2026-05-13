@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="shortcut icon" href="/PrasoonLogo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <form
+      class="bg-white shadow-lg position-absolute top-100 start-50 translate-middle rounded-1 px-5 py-4 w-75"
+    >
+      <h2 class="text-center text-primary">Registration Form</h2>
+
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <h5 class="text-primary-emphasis">Personal Information</h5>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your name"
+                class="form-control py-2"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your Email"
+                class="form-control py-2"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="Phone">Phone</label>
+              <input
+                type="tel"
+                id="Phone"
+                placeholder="Enter your Phone number"
+                class="form-control py-2"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="Dob">Date of Birth</label>
+              <input
+                type="date"
+                id="date"
+                placeholder="DOB"
+                class="form-control py-2"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-flex gap-3">
+              <label for="gender">Gender :</label>
+              <input type="radio" id="gender" name="gender" required />Male
+              <input type="radio" id="gender" name="gender" required />Female
+              <input type="radio" id="gender" name="gender" required />Other
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <h5 class="text-primary-emphasis">Academic Details</h5>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <span>Academic Qualification</span>
+              <select
+                name="Qualification"
+                id="Qualification"
+                class="form-select py-2"
+              >
+                <option value="">Select Academic Qualification</option>
+                <option value="10th">10th Pass</option>
+                <option value="12th">12th Pass</option>
+                <option value="graduate">Graduate</option>
+                <option value="post-graduate">Post Graduate</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="percentage">Email</label>
+              <input
+                type="number"
+                id="percentage"
+                placeholder="Grade in Last Qualification"
+                class="form-control py-2"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <h5 class="text-primary-emphasis">Course Information</h5>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <span>Preferred Course</span>
+              <select name="preferred" id="preferred" class="form-select py-2">
+                <option value="">Select Preferred course</option>
+                <option value="iit-jee">IIT-Jee</option>
+                <option value="neet">Neet</option>
+                <option value="banking">Banking Exams</option>
+                <option value="upsc">UPSC</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <span>Batch Timing</span>
+              <select
+                name="batch-timing"
+                id="batch-timing"
+                class="form-select py-2"
+              >
+                <option value="">Select Batch timing</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="weekend">Weekend</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <h5 class="text-primary-emphasis">Address</h5>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="residential">Residential</label>
+              <textarea
+                type="text"
+                id="residential"
+                class="form-control py-2"
+                placeholder="Enter your Residential area"
+                rows="5"
+              ></textarea>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                class="form-control py-2"
+                placeholder="Enter your City"
+              />
+            </div>
+             <div class="d-grid gap-lg-2 mt-3">
+              <label for="pincode">Pincode</label>
+              <input
+                type="text"
+                id="pincode"
+                class="form-control py-2"
+                placeholder="Enter your pincode"
+              />
+            </div>
+          </div>
+         
+        </div>
+      </section>
+
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <h5 class="text-primary-emphasis">Guardian Details</h5>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="GfullName">Guardian's Full name</label>
+              <input
+                type="text"
+                id="GfullName"
+                class="form-control py-2"
+                placeholder="Enter Guardian's Full Name"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <div class="d-grid gap-lg-2">
+              <label for="Gphone">Guardian's Full name</label>
+              <input
+                type="tel"
+                id="Gphone"
+                class="form-control py-2"
+                placeholder="Enter Guardian's Contact"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

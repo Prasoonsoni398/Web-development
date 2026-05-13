@@ -16,7 +16,7 @@ function submit() {
   if (!/^[A-Za-z\s]+$/.test(fn)) {
     document.getElementById("NameError").innerText = "Invalid Full Name";
   }
-  if (!/^[A-Za-z\.\_\d]+@gmail.com$/.test(Email)) {
+  if (!/^[A-Za-z\d]+@gmail.com$/.test(Email)) {
     document.getElementById("EmailError").innerText = "Invalid Email";
   }
 
