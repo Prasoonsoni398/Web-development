@@ -16,9 +16,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
-  <body>
-    <form
-      class="bg-white shadow-lg position-absolute top-100 start-50 translate-middle rounded-1 px-5 py-4 w-75"
+  <body style="background: linear-gradient(to bottom, rgb(243, 122, 209) , rgb(241, 108, 108));">
+    <h1
+      class="text-center text-primary py-5 rounded-top-4 "
+     style="background: linear-gradient(to right, rgb(122, 203, 243) , rgb(232, 226, 233));"
+    >
+      Coaching Institute Registration Form
+    </h1>
+   <div class="d-flex justify-content-center align-items-center py-5" >
+     <form
+      class="bg-primary-subtle shadow-lg rounded-1 px-md-5 px-4 py-4 w-75"
     >
       <h2 class="text-center text-primary">Registration Form</h2>
 
@@ -74,11 +81,18 @@
             </div>
           </div>
           <div class="col-lg-6 col-12 p-2">
-            <div class="d-flex gap-3">
-              <label for="gender">Gender :</label>
-              <input type="radio" id="gender" name="gender" required />Male
-              <input type="radio" id="gender" name="gender" required />Female
-              <input type="radio" id="gender" name="gender" required />Other
+              <p>Gender:</p>
+            <div class="d-flex gap-3 flex-wrap">
+              
+              <div>
+                <input type="radio" id="male" name="gender" required /><span class="ms-2">Male</span>
+              </div>
+              <div>
+                <input type="radio" id="female" name="gender" required /><span class="ms-2">Female</span>
+              </div>
+              <div>
+                <input type="radio" id="others" name="gender" required /><span class="ms-2">Others</span>
+              </div>
             </div>
           </div>
         </div>
@@ -95,7 +109,7 @@
                 id="Qualification"
                 class="form-select py-2"
               >
-                <option value="">Select Academic Qualification</option>
+                <option value="" disabled>Select Academic Qualification</option>
                 <option value="10th">10th Pass</option>
                 <option value="12th">12th Pass</option>
                 <option value="graduate">Graduate</option>
@@ -126,7 +140,7 @@
             <div class="d-grid gap-lg-2">
               <span>Preferred Course</span>
               <select name="preferred" id="preferred" class="form-select py-2">
-                <option value="">Select Preferred course</option>
+                <option value="" disabled>Select Preferred course</option>
                 <option value="iit-jee">IIT-Jee</option>
                 <option value="neet">Neet</option>
                 <option value="banking">Banking Exams</option>
@@ -143,7 +157,7 @@
                 id="batch-timing"
                 class="form-select py-2"
               >
-                <option value="">Select Batch timing</option>
+                <option value="" disabled>Select Batch timing</option>
                 <option value="morning">Morning</option>
                 <option value="afternoon">Afternoon</option>
                 <option value="evening">Evening</option>
@@ -179,7 +193,7 @@
                 placeholder="Enter your City"
               />
             </div>
-             <div class="d-grid gap-lg-2 mt-3">
+            <div class="d-grid gap-lg-2 mt-3">
               <label for="pincode">Pincode</label>
               <input
                 type="text"
@@ -189,7 +203,6 @@
               />
             </div>
           </div>
-         
         </div>
       </section>
 
@@ -220,7 +233,28 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="row bg-light shadow-lg rounded-2 p-3 mt-4">
+          <div class="col-lg-6 col-12 p-2">
+            <button
+              type="submit"
+              class="btn btn-primary rounded-3 w-100 "
+            >
+              SUBMIT
+            </button>
+          </div>
+          <div class="col-lg-6 col-12 p-2">
+            <button
+              type="reset"
+              class="btn btn-outline-danger rounded-top-4 rounded-0 rounded-start-0 w-100"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </section>
     </form>
+   </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
