@@ -46,34 +46,29 @@ function addNewTask() {
 }
 
 function saveToLocalStorage(taskToAdd) {
-  const taskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
+  const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
 
-  taskArray.push(taskToAdd);
+  TaskArray.push(taskToAdd);
 
-  console.log(taskArray);
-
-  const newTaskArray = JSON.stringify(taskArray);
+  const newTaskArray = JSON.stringify(TaskArray);
 
   localStorage.setItem("toDoTask", newTaskArray);
 }
 
 function getTaskFromLocalStorage() {
-  const taskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
-  console.log(taskArray);
+  const TaskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
 
-  taskArray.forEach((element) => {
+  console.log(TaskArray);
+
+  TaskArray.forEach((element) => {
     const LI = document.createElement("li");
     LI.classList.add("my-3");
 
     const DIV = document.createElement("div");
-    DIV.classList.add(
-      "d-flex",
-      "align-items-center",
-      "justify-content-between",
-    );
+    DIV.classList.add("d-flex", "align-items-center", "justify-content-between");
 
     const SPAN1 = document.createElement("span");
-    SPAN1.innerHTML = element;
+    SPAN1.innerText = element;
 
     const BUTTON = document.createElement("button");
     BUTTON.classList.add(
@@ -85,7 +80,10 @@ function getTaskFromLocalStorage() {
       "align-items-center",
       "justify-content-center",
     );
-    BUTTON.onclick = () => LI.remove();
+    BUTTON.onclick = () => {
+      LI.remove();
+      removeTaskFromLocalStorage(element);
+    };
 
     const I = document.createElement("i");
     I.classList.add("bi", "bi-trash");
@@ -106,22 +104,21 @@ function getTaskFromLocalStorage() {
     document.getElementById("taskList").appendChild(LI);
   });
 }
+
 getTaskFromLocalStorage();
 
 function removeTaskFromLocalStorage(taskItem) {
   console.log(taskItem);
 
-  const taskArray = JSON.parse(localStorage.getItem("toDoTask")) || [];
+  const TaskArray = JSON.parse(localStorage.getItem("toDoTask"));
 
-  // console.log(taskArray.indexof(taskItem));
+  console.log(TaskArray);
 
-  const newTaskArray = taskArray.filter((item) => item !== taskItem);
+  const newTaskArray = TaskArray.filter((item) => item !== taskItem);
 
   console.log(newTaskArray);
-  
-  const newTaskArrayString = JSON.stringify(newTaskArray);
 
-  localStorage.setItem("toDoTask", newTaskArrayString);
+  const newTaskString = JSON.stringify(newTaskArray);
+
+  localStorage.setItem("toDoTask", newTaskString);
 }
-
-removeTaskFromLocalStorage()
