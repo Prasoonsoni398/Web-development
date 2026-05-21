@@ -1,0 +1,36 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.main-card {
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+#calculateBtn {
+    margin-top: 10px;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+#error {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+}
