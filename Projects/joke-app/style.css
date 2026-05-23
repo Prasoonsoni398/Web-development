@@ -1,0 +1,4 @@
+#joke-div:hover{
+    transform: translateY(40px);
+    transition: transform 0.5s ease-in 0s;
+}
