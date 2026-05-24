@@ -18,10 +18,12 @@
     />
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="Enter your city name..." id="cityName" />
-      <button type="submit" onclick="getWeather()">Get Weather</button>
-      <div>Temp : <span id="Temperature"></span>°C</div>
+    <div class="position-absolute start-50 top-50 translate-middle p-4 rounded-end-0 rounded-5 rounded-bottom-5 bg-warning-subtle border-1 border-black border">
+      <div class="d-grid justify-content-center gap-4 p-2">
+        <input type="text" placeholder="Enter your city name..." id="cityName" class="form-control rounded-2 shadow-none"/>
+      <button type="submit" onclick="getWeather()" class="btn btn-primary ">Get Weather</button>
+      <div class="d-flex justify-content-center">Temp : <span id="Temperature"></span>°C</div>
+      </div>
     </div>
 
     <script src="script.js"></script>
