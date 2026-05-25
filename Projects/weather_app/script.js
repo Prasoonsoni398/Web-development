@@ -1,58 +1,56 @@
-const API_KEY = "api needed";
-
-// async function getWeather() {
-//   const cityName = document.getElementById("cityName").value.trim();
-
-//   const { Lattitude, Longitude } = await geoLocation(cityName);
-//   const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?lat=${Lattitude}&lon=${Longitude}&appid=${API_KEY}`;
-
-//   const response = await fetch(WEATHER_API);
-//   const data = await response.json;
-
-//   document.getElementById("Temperature").innerText = data.main.temp;
-// }
-
-// async function geoLocation(cityName) {
-//   const GEO_LOC = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=3${API_KEY}`;
-
-//   const response = await fetch(GEO_LOC);
-
-//   const data = await response.json();
-
-//   console.log(data);
-
-//   const Lattitude = data[0].lat;
-//   const Longitude = data[0].lon;
-
-//   return { Lattitude, Longitude };
-// }
-
+const API_KEY = "34429a77c950d4b08fa3273bfeb9f0c1";
 
 async function getWeather() {
-  const cityName = document.getElementById("cityName").value.trim();
+  const city = document.getElementById("cityName").value.trim();
 
-  const { Lattitude, Longitude } = await getGeoLocation(cityName);
+  if (city === "") return;
 
+  const API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
-  const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?lat=${Lattitude}&lon=${Longitude}&appid=${API_KEY}`;
+  const response = await fetch(API);
 
-  const response = await fetch(WEATHER_API);
   const data = await response.json();
 
+  if (data.cod != 200) return;
 
-  const temperature = data.main.temp - 273.15;
+  // City
 
-  document.getElementById("Temperature").innerText = temperature.toFixed(2);
+  document.getElementById("city").innerText = data.name;
+
+  // Condition
+  document.getElementById("condition").innerText = data.weather[0].main;
+
+  // Temperature
+
+  document.getElementById("temperature").innerText = data.main.temp.toFixed(1);
+
+  // Humidity
+
+  document.getElementById("humidity").innerText = data.main.humidity + "%";
+
+  // Wind Speed
+
+  document.getElementById("wind").innerText = data.wind.speed + " km/h";
+
+  // Feels Like
+
+  document.getElementById("feelsLike").innerText =
+    data.main.feels_like.toFixed(1) + "°C";
+
+  // Pressure
+
+  document.getElementById("pressure").innerText = data.main.pressure + " hPa";
+
+  // Weather Icon
+
+  document.getElementById("icon").src =
+    `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
-async function getGeoLocation(city) {
-  const GEO_LOC_API = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
+// Enter Key Support
 
-  const response = await fetch(GEO_LOC_API);
-  const data = await response.json();
-
-  const Lattitude = data[0].lat;
-  const Longitude = data[0].lon;
-
-  return { Lattitude, Longitude };
-}
+document.getElementById("cityName").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    getWeather();
+  }
+});
