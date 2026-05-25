@@ -1,0 +1,119 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #0f172a,
+            #175cdd,
+            #38bdf8);
+}
+
+/* Search Box */
+
+.search-box input {
+    height: 65px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box button {
+    width: 65px;
+    border-radius: 5px;
+    color: #175cdd;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    transform: scale(1.08);
+}
+
+/* Main Card */
+
+.main-card,
+.weather-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather Icon */
+
+#icon {
+    width: 130px;
+}
+
+/* Temperature */
+
+.temp {
+    font-size: 50px;
+}
+
+/* Weather Cards */
+
+.weather-card {
+    transition: 0.3s;
+}
+
+.weather-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .main-card {
+        text-align: center;
+        gap: 20px;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+    .temp {
+        font-size: 60px;
+    }
+
+}
+
+@keyframes cloudMove {
+    0% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.9;
+    }
+
+    25% {
+        transform: translateY(-10px) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-6px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.9;
+    }
+
+}
+
+.cloud {
+    animation: cloudMove 3s infinite ease-in-out;
+    filter: drop-shadow(0 0 10px rgba(246, 229, 101, 0.7));
+}
