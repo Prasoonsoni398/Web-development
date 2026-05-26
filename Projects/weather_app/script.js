@@ -43,8 +43,7 @@ async function getWeather() {
 
   // Weather Icon
 
-  document.getElementById("icon").src =
-    `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  
 }
 
 // Enter Key Support
