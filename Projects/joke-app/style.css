@@ -1,0 +1,12 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #175CDD, #5b9dff);
+}
+
+.joke-card {
+  transition: 0.3s;
+}
+
+.joke-card:hover {
+  transform: translateY(-5px);
+}
