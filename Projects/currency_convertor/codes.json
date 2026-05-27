@@ -1,0 +1,29 @@
+[
+  {
+    "Country": "INDIA",
+    "Currency_Name": "Indian Rupee",
+    "Currency_Code": "INR",
+    "Country_Code": "IN"
+  },
+
+  {
+    "Country": "UNITED STATES",
+    "Currency_Name": "US Dollar",
+    "Currency_Code": "USD",
+    "Country_Code": "US"
+  },
+
+  {
+    "Country": "JAPAN",
+    "Currency_Name": "Yen",
+    "Currency_Code": "JPY",
+    "Country_Code": "JP"
+  },
+
+  {
+    "Country": "UNITED KINGDOM",
+    "Currency_Name": "Pound Sterling",
+    "Currency_Code": "GBP",
+    "Country_Code": "GB"
+  }
+]
