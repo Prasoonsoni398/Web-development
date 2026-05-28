@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="/PrasoonLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
+  </head>
+  <body>
+    <header class="bg-primary text-light p-3">
+      <h1 class="text-center fst-italic text-uppercase">Currency Convertor</h1>
+    </header>
+
+    <main>
+      <div
+        class="position-absolute shadow-lg rounded-3 top-50 p-4 start-50 translate-middle"
+      >
+        <div class="row">
+          <div class="col-lg-6 col-12 p-3">
+            <div class="d-grid gap-3">
+              <img src="/PrasoonLogo.png" alt="" id="flag1" width="80px" />
+              <div class="d-grid gap-1">
+                <label for="country1">Select country 1</label>
+                <select
+                  id="country1"
+                  class="border-1 text-primary rounded-2 p-1 px-5"
+                >
+                  <option value="" disabled>Select country</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 p-3">
+            <div class="d-grid gap-3">
+              <img src="/PrasoonLogo.png" alt="" id="flag1" width="80px" />
+              <div class="d-grid gap-1">
+                <label for="country2">Select country 2</label>
+                <select
+                  id="country2"
+                  class="border-1 text-primary rounded-2 p-1 px-5"
+                >
+                  <option value="" disabled>Select country</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <button class="btn btn-outline-success w-50">Convert</button>
+          <div class="bg-primary-subtle rounded-2 p-2 w-50" id="newAmount"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
