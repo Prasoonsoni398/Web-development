@@ -1,0 +1,11 @@
+.card{
+  border-radius: 15px;
+}
+
+.list-group-item{
+  transition: 0.3s;
+}
+
+.list-group-item:hover{
+  transform: translateY(-2px);
+}
