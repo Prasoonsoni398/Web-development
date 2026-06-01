@@ -1,10 +1,45 @@
 function Login() {
   return (
-    <>
-      <div className="bg-success-subtle d-flex fs-3 align-items-center justify-content-center w-25 h-25 rounded-start-5 rounded-bottom-5 border border-danger border-2 position-absolute top-50 start-50 translate-middle">
-        Login
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div
+        className="card shadow p-4"
+        style={{ width: "400px" }}
+      >
+        <h2 className="text-center text-primary mb-4">
+          Login
+        </h2>
+
+        <div className="mb-3">
+          <label className="form-label">
+            Email Address
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <button className="btn btn-primary w-100">
+          Login
+        </button>
+
+        <p className="text-center mt-3 mb-0">
+          Don't have an account? Register
+        </p>
       </div>
-    </>
+    </div>
   );
 }
 
