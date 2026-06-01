@@ -5,7 +5,7 @@ function Register() {
         <div className="col-md-5">
           <div className="card shadow">
             <div className="card-body">
-              <h2 className="text-center text-success mb-4">Register</h2>
+              <h2 className="text-center text-primary mb-4">Register</h2>
 
               <div className="mb-3">
                 <label className="form-label">Full Name</label>
@@ -47,7 +47,7 @@ function Register() {
                 />
               </div>
 
-              <button className="btn btn-success w-100">Register</button>
+              <button className="btn btn-primary w-100">Register</button>
 
               <p className="text-center mt-3 mb-0">
                 Already have an account? Login
