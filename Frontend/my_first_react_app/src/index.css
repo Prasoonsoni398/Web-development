@@ -1,10 +1,4 @@
-#app{
-  background-color: red;
-}
-#header{
-  background-color: black;
- color:aliceblue;
-}
-#footer{
-  background-color: blueviolet;
+.navLinks:hover{
+  color: rgb(17, 17, 191) !important;
+  text-decoration: underline rgb(17, 17, 191) !important;
 }
