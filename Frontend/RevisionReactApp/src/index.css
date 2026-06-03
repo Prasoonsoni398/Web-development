@@ -1,0 +1,12 @@
+#navLinks:hover{
+  text-decoration: underline orangered;
+  color: orangered;
+  text-underline-offset: 4px;
+  transform: scale(1.1);
+}
+span{
+  cursor: pointer;
+}
+#brand{
+  cursor: pointer;
+}
