@@ -106,7 +106,7 @@ function App() {
               </p>
 
               <div className="d-flex gap-3 mt-4">
-                <button className="btn btn-primary glow-btn">Hire Me</button>
+                <button className="btn btn-primary glow-btn  ">Hire Me</button>
 
                 <button className="btn btn-outline-info">
                   <FaDownload /> Resume
@@ -114,10 +114,21 @@ function App() {
               </div>
 
               <div className="social-icons">
-                <FaGithub />
-                <FaLinkedin />
-                <FaInstagram />
-                <FaEnvelope />
+                <a href="#" className="icon github">
+                  <FaGithub />
+                </a>
+
+                <a href="#" className="icon linkedin">
+                  <FaLinkedin />
+                </a>
+
+                <a href="#" className="icon instagram">
+                  <FaInstagram />
+                </a>
+
+                <a href="#" className="icon gmail">
+                  <FaEnvelope />
+                </a>
               </div>
             </motion.div>
 
