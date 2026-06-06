@@ -1,48 +1,70 @@
-function ContactUs() {
-  return (
-    <div className="container mt-5 pt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-4">
-          <div className="card shadow">
-            <div className="card-body">
-              <h2 className="text-center text-primary mb-4">Contact Us</h2>
+import { useState } from "react";
 
-              <div className="mb-3">
-                <label className="form-label">Full Name</label>
+function ContactUs() {
+
+  const [userName,setUserName] = useState("")
+  const [email,setEmail] = useState("")
+  const [message,setMessage] = useState("")
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+
+    console.log("UserName :",userName);
+    console.log("Email :",email);
+    console.log("Message :",message);
+    
+  }
+
+  return (
+   <>
+    <div className="d-flex justify-content-center">
+      <div className="bg-light border shadow rounded w-50 mt-5 p-5">
+        <form onSubmit={handleSubmit} >
+
+          <div className="mb-3">
+                <label className="form-label fw-semibold">Full Name</label>
 
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control shadow-none border-2"
                   placeholder="Enter Your Name"
+                  value={userName}
+                  onChange={(e)=>setUserName(e.target.value)}
                 />
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Email Address</label>
+                <label className="form-label fw-semibold">Email Address</label>
 
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control shadow-none border-2"
                   placeholder="Enter Your Email"
+                   value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Message</label>
+                <label className="form-label fw-semibold">Message</label>
 
                 <textarea
-                  className="form-control"
+                  className="form-control shadow-none border-2"
                   rows="4"
                   placeholder="Enter Your Message"
+                   value={message}
+                  onChange={(e)=>setMessage(e.target.value)}
                 ></textarea>
               </div>
 
-              <button className="btn btn-primary w-100">Send Message</button>
-            </div>
-          </div>
-        </div>
+             <div className="d-flex justify-content-center mt-3">
+               <button className="btn btn-primary px-4 py-2" type="submit">Send Message</button>
+             </div>
+        </form>
+
       </div>
     </div>
+   </>
   );
 }
 
