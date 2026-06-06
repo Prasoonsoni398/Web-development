@@ -1,15 +1,19 @@
+import { useNavigate } from "react-router-dom";
 function Home() {
+
+  const navigate = useNavigate()
+  
   return (
     <>
       <div className="container py-5">
         <div className="text-center mb-5">
-          <h1 className="display-4 fw-bold text-primary">
+          <h1 className="fw-bold text-primary">
             Welcome to Prasoon's Website
           </h1>
-          <p className="lead">
-            Learn React, Bootstrap, and Web Development easily.
+          <p className="text-secondary fs-5" >
+            We have various Product's for you
           </p>
-          <button className="btn btn-primary btn-lg">Get Started</button>
+          <button className="btn btn-primary btn-md" onDoubleClick={()=> navigate("/contact")}>Check Products</button>
         </div>
 
         <div className="row g-4">
