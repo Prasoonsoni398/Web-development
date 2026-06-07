@@ -1,25 +1,23 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("UserName :",userName);
-    console.log("Password :",password);
-    
-  }
+    console.log("UserName :", userName);
+    console.log("Password :", password);
+  };
 
   return (
-
     <div className="d-flex justify-content-center align-items-center">
       <div className="bg-light shadow rounded w-50 mt-5 p-5 border">
         <h1 className="text-center text-primary fw-bold mb-3">Welcome Back</h1>
         <form onSubmit={handleSubmit}>
-          <div>
-            <div className="d-grid gap-1">
+          <div className="d-grid gap-1">
             <label htmlFor="userName" className="fw-semibold">
               Username
             </label>
@@ -43,7 +41,20 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-primary float-end mt-3">Login</button>
+          <div className="d-flex justify-content-center mt-3">
+            <button type="submit" className="btn btn-primary float-end mt-3">
+              Login
+            </button>
+          </div>
+          <div className="d-flex mt-3 gap-2">
+            <hr className="flex flex-grow-1" />
+            <p>
+              Don't have an account?{" "}
+              <Link to="/register" className="text-decoration-none">
+                Register here
+              </Link>
+            </p>
+            <hr className="flex flex-grow-1" />
           </div>
         </form>
       </div>

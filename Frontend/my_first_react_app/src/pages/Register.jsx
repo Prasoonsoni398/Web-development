@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom"
 
 function Register() {
 
@@ -72,6 +73,12 @@ function Register() {
             <button className="btn btn-primary px-4 py-1" type="submit">
               Register
             </button>
+          </div>
+
+          <div className="d-flex mt-3 gap-2">
+            <hr className="flex flex-grow-1" />
+            <p>Already have an account? <Link to="/login" className="text-decoration-none">Login</Link></p>
+            <hr className="flex flex-grow-1" />
           </div>
         </form>
       </div>
