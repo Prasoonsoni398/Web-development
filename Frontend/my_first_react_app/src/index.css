@@ -1,4 +1,146 @@
-.navLinks:hover{
-  color: rgb(17, 17, 191) !important;
-  text-decoration: underline rgb(17, 17, 191) !important;
+:root {
+  --color-primary: #c2410c;
+  --color-primary-content: #ffffff;
+  --color-secondary: #6b7280;
+  --color-neutral: #3f3f46;
+  --color-neutral-content: #f4f4f5;
+  --color-base-100: #fff8f1;
+  --color-base-200: #f5ede5;
+  --color-base-300: #e7d9c9;
+  --color-base-content: #2d1b10;
+  --color-error: #ef4444;
+  --color-success: #22c55e;
+  --color-pink: #D9468F;
+}
+
+header {
+  height: 64px;
+  background-color: var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  img {
+    height: 56px;
+    width: 56px;
+    padding-top: 3px;
+  }
+
+  #login:hover {
+    border: 1px solid var(--color-primary-content);
+  }
+
+  #register {
+    color: var(--color-primary);
+    background-color: var(--color-primary-content);
+  }
+
+  #register:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-primary-content);
+    color: var(--color-primary-content);
+  }
+}
+
+.herosection {
+  position: relative;
+
+  img {
+    height: 82vh;
+  }
+
+}
+
+.dull-img {
+  filter: brightness(60%);
+}
+
+.about-dull-img {
+  filter: brightness(45%);
+}
+
+#signUp,
+.submit-ticket {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+.herocontent {
+  position: absolute;
+  top: 25%;
+
+
+  #orderNow {
+    background-color: var(--color-primary-content);
+    color: var(--color-base-content);
+  }
+
+  .search {
+    color: var(--color-base-content);
+    background-color: var(--color-primary-content);
+    width: 60%;
+  }
+
+}
+
+.login-bg img {
+  height: 91vh;
+  width: 100%;
+}
+
+.login-div {
+  left: 8%;
+  top: 13%;
+}
+
+.login-div,
+.register-div {
+  padding: 23px 39px !important;
+  width: 29.5%;
+  background-color: var(--color-neutral-content);
+
+  a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 13px;
+  }
+
+  
+
+  p,
+  .line,
+  i,
+  .remember,
+  .terms {
+    color: var(--color-secondary);
+    accent-color: var(--color-primary);
+
+  }
+
+  button {
+    background-color: var(--color-primary);
+
+  }
+
+  h2,
+  #anchor-underline {
+    color: var(--color-primary);
+  }
+
+  #anchor-underline {
+    font-size: 14px;
+  }
+}
+
+
+.input-field {
+  height: 37px;
+  border: 0.5px solid var(--color-base-300) !important;
+  border-radius: 5px;
+}
+
+.input-field::placeholder,
+.input-field input::placeholder,
+.updated {
+  font-size: 14px !important;
 }
