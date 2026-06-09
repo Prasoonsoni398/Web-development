@@ -10,7 +10,7 @@ import About from "./pages/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
+  return ( 
     <>
       <BrowserRouter>
         <Header />
