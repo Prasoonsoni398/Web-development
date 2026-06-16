@@ -1,143 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const categories = ["Fashion", "Electronics", "Home", "Beauty", "Sport"];
 
 const Home = () => {
+  const [activeCategory, setActiveCategory] = useState("Fashion");
+
   return (
     <main className="min-h-screen bg-slate-100 pb-16">
-      <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden bg-linear-to-br from-slate-950 via-blue-900 to-slate-700 px-6 py-16 text-white sm:px-10">
+      <section className="relative lg:h-[calc(100vh-4rem)] max-h-[44rem] overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 px-6 py-8 text-white sm:px-8 sm:py-12">
         <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.35),_transparent_35%)]" />
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.3),_transparent_30%)]" />
-        <div className="relative mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[1.55fr_0.95fr] lg:items-center">
-            <div className="space-y-6">
-              <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm uppercase tracking-[0.35em] text-cyan-200 shadow-sm">
+        <div className="relative mx-auto grid h-full max-w-6xl items-center">
+          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
+            <div className="space-y-6 max-w-2xl">
+              <span className="inline-flex rounded-full bg-cyan-500/10 px-4 py-2 text-sm uppercase tracking-[0.35em] text-cyan-200 shadow-sm border border-cyan-500/20">
                 curated for modern shopping
               </span>
-              <h1 className="text-5xl font-bold leading-tight sm:text-6xl">
-                Shop smarter with the easiest FakeStore experience.
+              <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                Shop smarter with a polished FakeStore experience.
               </h1>
-              <p className="max-w-3xl text-base leading-8 text-slate-200 sm:text-lg">
-                Browse trending products across categories, compare prices with
-                confidence, and enjoy a polished UI designed for discovery.
+              <p className="text-base leading-8 text-slate-300 sm:text-lg">
+                Discover trending collections, fast browsing, and clear product highlights in one beautiful storefront.
               </p>
-              <div className="flex flex-wrap gap-3">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    type="button"
-                    className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.35em] text-slate-200 transition hover:bg-white/20"
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Link
                   to="/product"
-                  className="inline-flex rounded-full bg-cyan-400 px-8 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+                  className="inline-flex rounded-full bg-cyan-400 px-7 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
                 >
                   Explore Products
                 </Link>
                 <Link
                   to="/about"
-                  className="inline-flex rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+                  className="inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-7 py-3 text-sm font-semibold text-white transition hover:bg-cyan-500/20"
                 >
                   Learn More
                 </Link>
               </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-3xl bg-white/10 p-5 text-center ring-1 ring-white/10 backdrop-blur-sm">
-                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-                    popular
-                  </p>
-                  <p className="mt-4 text-3xl font-bold text-white">500+</p>
-                  <p className="mt-2 text-sm text-slate-300">
-                    Trusted products
-                  </p>
-                </div>
-                <div className="rounded-3xl bg-white/10 p-5 text-center ring-1 ring-white/10 backdrop-blur-sm">
-                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-                    fast
-                  </p>
-                  <p className="mt-4 text-3xl font-bold text-white">24h</p>
-                  <p className="mt-2 text-sm text-slate-300">
-                    Support response
-                  </p>
-                </div>
-                <div className="rounded-3xl bg-white/10 p-5 text-center ring-1 ring-white/10 backdrop-blur-sm">
-                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-                    easy
-                  </p>
-                  <p className="mt-4 text-3xl font-bold text-white">5 min</p>
-                  <p className="mt-2 text-sm text-slate-300">Quick checkout</p>
-                </div>
-              </div>
             </div>
 
-            <div className="rounded-4xl bg-white/10 p-8 shadow-2xl backdrop-blur-xl ring-1 ring-white/10">
-              <div className="space-y-5">
-                <div className="rounded-3xl bg-slate-950/90 p-6">
-                  <h2 className="text-xl font-semibold text-white">
-                    Top categories
-                  </h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">
-                    Fashion, electronics, home, beauty and more — all in one
-                    place.
-                  </p>
+            <div className="rounded-[32px] border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">selected category</p>
+                  <h2 className="mt-3 text-3xl font-semibold text-white">{activeCategory}</h2>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-3xl bg-slate-800/90 p-5">
-                    <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
-                      Popular
-                    </p>
-                    <p className="mt-3 text-lg font-semibold text-white">
-                      New arrivals & deals
-                    </p>
-                  </div>
-                  <div className="rounded-3xl bg-slate-800/90 p-5">
-                    <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
-                      Support
-                    </p>
-                    <p className="mt-3 text-lg font-semibold text-white">
-                      Fast help anytime
-                    </p>
-                  </div>
+                <div className="rounded-3xl bg-cyan-400/10 px-3 py-2 text-xs uppercase tracking-[0.35em] text-cyan-200">
+                  featured
                 </div>
-                <div className="rounded-[28px] border border-white/10 bg-slate-900/90 p-6">
-                  <h3 className="text-lg font-semibold text-white">
-                    Trending now
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-300">
-                    Hand-picked categories picked for you this week.
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="rounded-full bg-cyan-500/15 px-3 py-2 text-xs text-cyan-100">
-                      Smartphones
-                    </span>
-                    <span className="rounded-full bg-cyan-500/15 px-3 py-2 text-xs text-cyan-100">
-                      Sneakers
-                    </span>
-                    <span className="rounded-full bg-cyan-500/15 px-3 py-2 text-xs text-cyan-100">
-                      Smart Home
-                    </span>
-                    <span className="rounded-full bg-cyan-500/15 px-3 py-2 text-xs text-cyan-100">
-                      Gifts
-                    </span>
-                  </div>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-slate-300">
+                Hand-picked items and featured offers for {activeCategory.toLowerCase()}.
+              </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setActiveCategory(category)}
+                    className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.35em] transition ${
+                      activeCategory === category
+                        ? "bg-cyan-400 text-slate-950 shadow-lg"
+                        : "bg-slate-950/60 text-slate-200 hover:bg-slate-950/80"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl bg-slate-950/80 p-4">
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">fast pickup</p>
+                  <p className="mt-3 text-xl font-semibold text-white">2 day delivery</p>
                 </div>
-                <div className="rounded-[28px] bg-slate-800/90 p-6">
-                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-                    fast pick
-                  </p>
-                  <h3 className="mt-3 text-2xl font-semibold text-white">
-                    Featured service
-                  </h3>
-                  <p className="mt-3 text-slate-300">
-                    Experience quick delivery and curated product
-                    recommendations for every shopper.
-                  </p>
+                <div className="rounded-3xl bg-slate-950/80 p-4">
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">top rated</p>
+                  <p className="mt-3 text-xl font-semibold text-white">4.9/5</p>
                 </div>
               </div>
             </div>

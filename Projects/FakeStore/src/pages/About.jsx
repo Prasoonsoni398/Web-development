@@ -45,7 +45,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="rounded-4xl bg-linear-to-br from-cyan-500 to-blue-600 p-10 text-white shadow-[0_40px_80px_rgba(15,23,42,0.12)]">
+          <div className="rounded-4xl bg-gradient-to-br from-cyan-500 via-sky-500 to-blue-700 p-10 text-white shadow-[0_40px_80px_rgba(15,23,42,0.12)]">
             <p className="text-sm uppercase tracking-[0.35em] text-cyan-100/80">Fast facts</p>
             <h2 className="mt-5 text-3xl font-semibold">Why choose FakeStore?</h2>
             <div className="mt-8 space-y-6">
