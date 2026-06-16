@@ -45,33 +45,34 @@ const Product = () => {
   }, [products, searchTerm, selectedCategory]);
 
   return (
-    <main className="bg-slate-100 pb-14">
-      <section className="mx-auto max-w-6xl px-6 pt-10 sm:px-10">
-        <div className="rounded-[32px] bg-white p-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)]">
+    <main className="bg-(--bg-page) pb-14 transition-colors duration-300">
+      <section className="bg-gradient-to-br from-(--accent)/10 via-(--bg-page) to-(--bg-page) py-10 sm:py-16">
+        <div className="mx-auto max-w-6xl px-6 sm:px-10">
+          <div className="rounded-[32px] bg-(--bg-panel)/80 backdrop-blur-sm p-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)] border border-(--accent)/20">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-cyan-500">shop products</p>
-              <h1 className="mt-3 text-4xl font-bold text-slate-900">Find the perfect product for your next purchase.</h1>
-              <p className="mt-4 max-w-2xl text-slate-600 leading-7">
+              <p className="text-sm uppercase tracking-[0.35em] text-(--accent)">shop products</p>
+              <h1 className="mt-3 text-4xl font-bold text-(--text-primary)">Find the perfect product for your next purchase.</h1>
+              <p className="mt-4 max-w-2xl text-(--text-muted) leading-7">
                 Filter by category, search instantly, and explore featured items with rich product previews.
               </p>
             </div>
-            <div className="rounded-3xl bg-slate-50 p-4 shadow-sm">
-              <p className="text-sm text-slate-500">Available products</p>
-              <p className="mt-2 text-3xl font-semibold text-slate-900">{products.length}</p>
+            <div className="rounded-3xl bg-(--bg-panel-soft) p-4 shadow-sm">
+              <p className="text-sm text-(--text-muted)">Available products</p>
+              <p className="mt-2 text-3xl font-semibold text-(--text-primary)">{products.length}</p>
             </div>
           </div>
 
           <div className="mt-8 grid gap-4 lg:grid-cols-[1.3fr_0.8fr] lg:items-end">
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-              <label className="relative block text-slate-500">
+            <div className="rounded-3xl border border-(--border) bg-(--bg-panel-soft) p-4">
+              <label className="relative block text-(--text-muted)">
                 <span className="sr-only">Search products</span>
                 <input
                   type="search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Search products, categories, or keywords"
-                  className="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 pr-12 text-slate-900 outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100"
+                  className="w-full rounded-3xl border border-(--border) bg-(--bg-panel) px-4 py-3 pr-12 text-(--text-primary) outline-none focus:border-(--accent) focus:ring-2 focus:ring-(--accent)/10"
                 />
               </label>
             </div>
@@ -79,11 +80,11 @@ const Product = () => {
               <button
                 type="button"
                 onClick={() => setSearchTerm("")}
-                className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                className="rounded-full border border-(--border) bg-(--bg-panel) px-5 py-3 text-sm font-semibold text-(--text-primary) transition hover:bg-(--bg-panel-soft)"
               >
                 Reset Search
               </button>
-              <div className="rounded-3xl bg-cyan-500 px-5 py-3 text-sm font-semibold text-white">
+              <div className="rounded-3xl bg-(--accent) px-5 py-3 text-sm font-semibold text-slate-950">
                 {selectedCategory === "All" ? "Showing all categories" : `Category: ${selectedCategory}`}
               </div>
             </div>
@@ -97,8 +98,8 @@ const Product = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                   selectedCategory === category
-                    ? "bg-slate-900 text-white shadow-lg"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    ? "bg-(--accent) text-slate-950 shadow-lg"
+                    : "bg-(--bg-card) text-(--text-primary) hover:bg-(--bg-panel-soft)"
                 }`}
               >
                 {category}
@@ -106,19 +107,20 @@ const Product = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {isLoading ? (
         <section className="mx-auto max-w-6xl px-6 py-24 sm:px-10">
-          <div className="flex h-80 items-center justify-center rounded-[32px] bg-white shadow-lg">
+          <div className="flex h-80 items-center justify-center rounded-[32px] bg-(--bg-panel) shadow-lg">
             <img src={loading} alt="Loading products" className="h-20 w-20" />
           </div>
         </section>
       ) : isError ? (
         <section className="mx-auto max-w-6xl px-6 py-24 sm:px-10">
-          <div className="rounded-[32px] bg-white p-10 text-center shadow-lg">
-            <h2 className="text-2xl font-semibold text-slate-900">Unable to load products</h2>
-            <p className="mt-4 text-slate-600">{errorMessage || "Something went wrong while fetching product data."}</p>
+          <div className="rounded-[32px] bg-(--bg-panel) p-10 text-center shadow-lg">
+            <h2 className="text-2xl font-semibold text-(--text-primary)">Unable to load products</h2>
+            <p className="mt-4 text-(--text-muted)">Try a different search term or select another category.</p>
           </div>
         </section>
       ) : (
@@ -128,10 +130,10 @@ const Product = () => {
               filteredProducts.map((product) => (
                 <article
                   key={product.id}
-                  className="group overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+                  className="group overflow-hidden rounded-[32px] border border-(--border) bg-(--bg-panel) shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
                 >
-                  <div className="relative overflow-hidden bg-slate-50 px-6 py-8">
-                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-400/10 blur-2xl" />
+                  <div className="relative overflow-hidden bg-(--bg-panel-soft) px-6 py-8">
+                    <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-(--accent)/10 blur-2xl" />
                     <img
                       src={product.image}
                       alt={product.title}
@@ -139,34 +141,34 @@ const Product = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="inline-flex rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-700">
+                    <span className="inline-flex rounded-full bg-(--accent)/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-(--accent)">
                       {product.category}
                     </span>
-                    <h3 className="mt-5 text-lg font-semibold text-slate-900 line-clamp-2" title={product.title}>
+                    <h3 className="mt-5 text-lg font-semibold text-(--text-primary) line-clamp-2" title={product.title}>
                       {product.title}
                     </h3>
-                    <p className="mt-3 text-sm text-slate-600 line-clamp-3">
+                    <p className="mt-3 text-sm text-(--text-muted) line-clamp-3">
                       {product.description}
                     </p>
                     <div className="mt-5 flex items-center justify-between gap-3">
                       <div>
-                        <p className="text-xl font-bold text-slate-900">₹{Math.round(product.price * 100)}</p>
-                        <p className="text-sm text-slate-500">{product.rating?.count} reviews</p>
+                        <p className="text-xl font-bold text-(--text-primary)">₹{Math.round(product.price * 100)}</p>
+                        <p className="text-sm text-(--text-muted)">{product.rating?.count} reviews</p>
                       </div>
-                      <div className="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-700">
+                      <div className="flex items-center gap-2 rounded-full bg-(--bg-card) px-3 py-2 text-sm font-semibold text-(--text-primary)">
                         <FaStar className="text-yellow-400" /> {product.rating?.rate}
                       </div>
                     </div>
-                    <button className="mt-6 w-full rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
+                    <button className="mt-6 w-full rounded-full bg-(--accent) px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
                       Add to Cart
                     </button>
                   </div>
                 </article>
               ))
             ) : (
-              <div className="rounded-[32px] bg-white p-14 text-center shadow-lg">
-                <h2 className="text-2xl font-semibold text-slate-900">No products found</h2>
-                <p className="mt-4 text-slate-600">Try a different search term or select another category.</p>
+              <div className="rounded-[32px] bg-(--bg-panel) p-14 text-center shadow-lg">
+                <h2 className="text-2xl font-semibold text-(--text-primary)">No products found</h2>
+                <p className="mt-4 text-(--text-muted)">Try a different search term or select another category.</p>
               </div>
             )}
           </div>

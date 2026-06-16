@@ -2,90 +2,101 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <main className="min-h-[90vh] bg-slate-100 pb-16">
-      <section className="mx-auto max-w-6xl px-6 py-12 sm:px-10 sm:py-16">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_0.9fr] lg:items-start">
-          <div className="rounded-4xl bg-slate-950 px-8 py-10 text-white shadow-[0_30px_60px_rgba(15,23,42,0.18)]">
-            <span className="inline-flex rounded-full bg-cyan-500/15 px-4 py-2 text-sm uppercase tracking-[0.35em] text-cyan-200">
-              get in touch
+    <main className="min-h-screen bg-(--bg-page) text-(--text-primary) pb-16 transition-colors duration-300">
+      <section className="mx-auto max-w-6xl px-6 py-14 sm:px-10 sm:py-20">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="space-y-8 rounded-[36px] bg-(--bg-panel) p-10 shadow-2xl ring-1 ring-(--border)">
+            <span className="inline-flex rounded-full bg-(--accent)/10 px-4 py-2 text-sm uppercase tracking-[0.35em] text-(--accent)">
+              contact us
             </span>
-            <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl">
-              We’re here to help.
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
-              Questions about product features, store setup, or using the demo? Send a message and our team will respond quickly.
-            </p>
-            <div className="mt-10 grid gap-5 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tight text-(--text-primary) sm:text-5xl">
+                We’re ready to support your next project.
+              </h1>
+              <p className="max-w-3xl text-base leading-8 text-(--text-muted) sm:text-lg">
+                Whether you're asking about the store layout, product ideas, or the demo itself, send us a quick note and we'll respond promptly.
+              </p>
+            </div>
+            <div className="grid gap-5 rounded-[28px] bg-(--bg-card) p-7 ring-1 ring-(--border)">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-cyan-200/90">Email</p>
-                <p className="mt-2 text-lg font-semibold text-white">support@fakestore.com</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Email</p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">support@fakestore.com</p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-cyan-200/90">Location</p>
-                <p className="mt-2 text-lg font-semibold text-white">123 Market Street, Demo City</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Visit</p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">123 Market Street, Demo City</p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-cyan-200/90">Availability</p>
-                <p className="mt-2 text-lg font-semibold text-white">Mon - Fri, 9am - 6pm</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Hours</p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">Mon - Fri · 9am - 6pm</p>
               </div>
+            </div>
+            <div className="rounded-[28px] bg-(--bg-card) p-6 ring-1 ring-(--border)">
+              <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">Need faster help?</p>
+              <p className="mt-3 text-(--text-muted) leading-7">
+                Reach out with a short summary and we aim to respond within one business day.
+              </p>
             </div>
           </div>
 
-          <div className="rounded-4xl bg-white p-8 shadow-lg ring-1 ring-slate-200">
-            <h2 className="text-3xl font-bold text-slate-900">Send a message</h2>
-            <p className="mt-3 text-slate-600">
-              Use the form below and we’ll reach out shortly.
+          <div className="rounded-[36px] bg-(--bg-panel) p-10 shadow-2xl ring-1 ring-(--border)">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">Send a message</p>
+                <h2 className="mt-3 text-3xl font-bold text-(--text-primary)">Start a conversation</h2>
+              </div>
+              <div className="rounded-full bg-(--accent)/15 px-4 py-2 text-sm font-semibold text-(--accent)">
+                Response in 24h
+              </div>
+            </div>
+            <p className="mt-4 text-(--text-muted)">
+              Fill out the details below and our team will be in touch with the next steps.
             </p>
+
             <form className="mt-8 grid gap-5">
-              <label className="grid gap-2 text-sm font-medium text-slate-700">
+              <label className="grid gap-2 text-sm font-medium text-(--text-primary)">
                 Name
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                  className="rounded-3xl border border-(--border) bg-(--bg-card) px-4 py-3 text-(--text-primary) outline-none transition focus:border-(--accent) focus:ring-4 focus:ring-(--accent)/10"
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-medium text-slate-700">
+              <label className="grid gap-2 text-sm font-medium text-(--text-primary)">
                 Email
                 <input
                   type="email"
-                  placeholder="Your email"
-                  className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                  placeholder="jane@example.com"
+                  className="rounded-3xl border border-(--border) bg-(--bg-card) px-4 py-3 text-(--text-primary) outline-none transition focus:border-(--accent) focus:ring-4 focus:ring-(--accent)/10"
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-medium text-slate-700">
+              <label className="grid gap-2 text-sm font-medium text-(--text-primary)">
                 Subject
                 <input
                   type="text"
-                  placeholder="Message subject"
-                  className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                  placeholder="What can we help you with?"
+                  className="rounded-3xl border border-(--border) bg-(--bg-card) px-4 py-3 text-(--text-primary) outline-none transition focus:border-(--accent) focus:ring-4 focus:ring-(--accent)/10"
                 />
               </label>
 
-              <label className="grid gap-2 text-sm font-medium text-slate-700">
+              <label className="grid gap-2 text-sm font-medium text-(--text-primary)">
                 Message
                 <textarea
-                  rows="6"
-                  placeholder="How can we help you?"
-                  className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                  rows="5"
+                  placeholder="Share the details of your request"
+                  className="rounded-3xl border border-(--border) bg-(--bg-card) px-4 py-3 text-(--text-primary) outline-none transition focus:border-(--accent) focus:ring-4 focus:ring-(--accent)/10"
                 />
               </label>
 
               <button
                 type="submit"
-                className="rounded-full bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                className="inline-flex items-center justify-center rounded-full bg-(--accent) px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-400"
               >
-                Send Message
+                Send message
               </button>
             </form>
-            <div className="mt-8 rounded-[28px] bg-slate-50 p-6 text-slate-700 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Need fast support?</p>
-              <p className="mt-3 text-base leading-7">
-                You can also reach us by email or visit our office. We’ll respond within one business day.
-              </p>
-            </div>
           </div>
         </div>
       </section>
