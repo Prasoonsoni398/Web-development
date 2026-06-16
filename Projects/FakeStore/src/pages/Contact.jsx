@@ -2,10 +2,10 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <main className="min-h-[90vh] bg-gradient-to-b from-slate-100 to-white pb-16">
+    <main className="min-h-[90vh] bg-linear-to-b from-slate-100 to-white pb-16">
       <section className="mx-auto max-w-6xl px-6 py-12 sm:px-10 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_0.9fr] lg:items-start">
-          <div className="rounded-[32px] bg-slate-950 px-8 py-10 text-white shadow-[0_30px_60px_rgba(15,23,42,0.18)]">
+          <div className="rounded-4xl bg-slate-950 px-8 py-10 text-white shadow-[0_30px_60px_rgba(15,23,42,0.18)]">
             <span className="inline-flex rounded-full bg-cyan-500/15 px-4 py-2 text-sm uppercase tracking-[0.35em] text-cyan-200">
               get in touch
             </span>
@@ -31,7 +31,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="rounded-[32px] bg-white p-8 shadow-lg ring-1 ring-slate-200">
+          <div className="rounded-4xl bg-white p-8 shadow-lg ring-1 ring-slate-200">
             <h2 className="text-3xl font-bold text-slate-900">Send a message</h2>
             <p className="mt-3 text-slate-600">
               Use the form below and we’ll reach out shortly.
