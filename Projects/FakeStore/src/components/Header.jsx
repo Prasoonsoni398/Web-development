@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <>
       <div className="bg-blue-700 flex justify-between p-3    ">
-        <div className="flex gap-3 items-center text-white">
+        <Link to="/" className="flex gap-3 items-center text-white">
           <h1 className="text-2xl ">FakeStore</h1>
           <IoStorefrontSharp className="text-xl" />
-        </div>
+        </Link>
         <div className="text-white flex gap-4 text-lg">
           <Link to="/" className="hover:text-red-500 hover:underline offset-5">
             Home
