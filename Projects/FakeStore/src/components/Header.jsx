@@ -45,7 +45,7 @@ const Header = ({ theme, toggleTheme }) => {
 
           <Link
             to="/product"
-            className="rounded-full bg-(--accent) px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
+            className="rounded-full bg-(--accent) px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-amber-700"
           >
             Shop now
           </Link>
@@ -81,7 +81,7 @@ const Header = ({ theme, toggleTheme }) => {
           <Link
             to="/product"
             onClick={() => setMenuOpen(false)}
-            className="block rounded-full bg-(--accent) px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
+            className="block rounded-full bg-(--accent) px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-amber-700"
           >
             Shop now
           </Link>

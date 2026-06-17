@@ -2,7 +2,6 @@ import React from "react";
 import { FiTarget, FiEye, FiZap, FiShield, FiTrendingUp } from "react-icons/fi";
 import { FiNavigation, FiSmartphone, FiLayout } from "react-icons/fi";
 
-
 import { HiOutlineSparkles } from "react-icons/hi2";
 
 const About = () => {
@@ -191,7 +190,7 @@ const About = () => {
       </section>
 
       {/* Features grid */}
-      <section className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-10">
         {/* Heading */}
         <div className="mb-10 text-center">
           <span className="inline-flex rounded-full bg-(--accent)/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-(--accent)">
@@ -272,108 +271,98 @@ const About = () => {
         </div>
       </section>
 
-     <section className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-16">
-  {/* Header */}
-  <div className="mb-10 text-center">
-    <span className="inline-flex rounded-full bg-(--accent)/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-(--accent)">
-      Core Values
-    </span>
+      <section className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-10">
+        {/* Header */}
+        <div className="mb-10 text-center">
+          <span className="inline-flex rounded-full bg-(--accent)/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-(--accent)">
+            Core Values
+          </span>
 
-    <h2 className="mt-4 text-3xl font-bold tracking-tight text-(--text-primary) sm:text-4xl">
-      What Drives Us Forward
-    </h2>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-(--text-primary) sm:text-4xl">
+            What Drives Us Forward
+          </h2>
 
-    <p className="mx-auto mt-3 max-w-2xl text-(--text-muted)">
-      Guiding principles that shape every decision, feature, and experience
-      throughout FakeStore.
-    </p>
-  </div>
-
-  {/* Main Card */}
-  <div className="relative overflow-hidden rounded-[32px] border border-(--border) bg-(--bg-panel) p-6 sm:p-8 shadow-lg">
-
-    {/* Accent Glow */}
-    <div className="absolute right-0 top-0 h-64 w-64 translate-x-20 -translate-y-20 rounded-full bg-(--accent)/5 blur-3xl" />
-
-    <div className="relative z-10">
-
-      <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-(--accent)">
-          Our Philosophy
-        </p>
-
-        <h3 className="mt-3 text-2xl font-bold text-(--text-primary) sm:text-3xl">
-          Built around simplicity, speed, and trust
-        </h3>
-
-        <p className="mt-4 leading-7 text-(--text-muted)">
-          We focus on creating intuitive shopping experiences that feel
-          effortless. Every layout, interaction, and feature is designed to
-          help users discover products quickly and confidently.
-        </p>
-      </div>
-
-      {/* Value Cards */}
-      <div className="mt-8 grid gap-5 md:grid-cols-3">
-
-        {/* Clarity */}
-        <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
-
-          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
-            <FiEye size={22} />
-          </div>
-
-          <h4 className="text-lg font-semibold text-(--text-primary)">
-            Clarity
-          </h4>
-
-          <p className="mt-3 leading-7 text-(--text-muted)">
-            Clean layouts and intuitive interfaces make every page easy to
-            understand and navigate.
+          <p className="mx-auto mt-3 max-w-2xl text-(--text-muted)">
+            Guiding principles that shape every decision, feature, and
+            experience throughout FakeStore.
           </p>
-
         </div>
 
-        {/* Speed */}
-        <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
+        {/* Main Card */}
+        <div className="relative overflow-hidden rounded-[32px] border border-(--border) bg-(--bg-panel) p-6 sm:p-8 shadow-lg">
+          {/* Accent Glow */}
+          <div className="absolute right-0 top-0 h-64 w-64 translate-x-20 -translate-y-20 rounded-full bg-(--accent)/5 blur-3xl" />
 
-          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
-            <FiZap size={22} />
+          <div className="relative z-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-(--accent)">
+                Our Philosophy
+              </p>
+
+              <h3 className="mt-3 text-2xl font-bold text-(--text-primary) sm:text-3xl">
+                Built around simplicity, speed, and trust
+              </h3>
+
+              <p className="mt-4 leading-7 text-(--text-muted)">
+                We focus on creating intuitive shopping experiences that feel
+                effortless. Every layout, interaction, and feature is designed
+                to help users discover products quickly and confidently.
+              </p>
+            </div>
+
+            {/* Value Cards */}
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {/* Clarity */}
+              <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
+                  <FiEye size={22} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-(--text-primary)">
+                  Clarity
+                </h4>
+
+                <p className="mt-3 leading-7 text-(--text-muted)">
+                  Clean layouts and intuitive interfaces make every page easy to
+                  understand and navigate.
+                </p>
+              </div>
+
+              {/* Speed */}
+              <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
+                  <FiZap size={22} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-(--text-primary)">
+                  Speed
+                </h4>
+
+                <p className="mt-3 leading-7 text-(--text-muted)">
+                  Fast interactions and responsive pages keep the shopping
+                  journey smooth and engaging.
+                </p>
+              </div>
+
+              {/* Trust */}
+              <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
+                  <FiShield size={22} />
+                </div>
+
+                <h4 className="text-lg font-semibold text-(--text-primary)">
+                  Trust
+                </h4>
+
+                <p className="mt-3 leading-7 text-(--text-muted)">
+                  Consistent design patterns and reliable experiences build
+                  confidence with every interaction.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <h4 className="text-lg font-semibold text-(--text-primary)">
-            Speed
-          </h4>
-
-          <p className="mt-3 leading-7 text-(--text-muted)">
-            Fast interactions and responsive pages keep the shopping journey
-            smooth and engaging.
-          </p>
-
         </div>
-
-        {/* Trust */}
-        <div className="group rounded-3xl border border-(--border) bg-(--bg-card) p-6 transition-all duration-300 hover:-translate-y-2 hover:border-(--accent)/30 hover:shadow-xl">
-
-          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-(--accent)/10 text-(--accent)">
-            <FiShield size={22} />
-          </div>
-
-          <h4 className="text-lg font-semibold text-(--text-primary)">
-            Trust
-          </h4>
-
-          <p className="mt-3 leading-7 text-(--text-muted)">
-            Consistent design patterns and reliable experiences build
-            confidence with every interaction.
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </main>
   );
 };

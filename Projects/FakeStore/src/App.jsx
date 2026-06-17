@@ -8,7 +8,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 const App = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('fakestore-theme')
