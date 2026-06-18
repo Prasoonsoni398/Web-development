@@ -14,7 +14,7 @@ const App = () => {
     const storedTheme = localStorage.getItem('fakestore-theme')
     const defaultTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     setTheme(defaultTheme)
-  }, [])
+  }, []) 
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
