@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Contact = () => {
   return (
@@ -14,27 +14,44 @@ const Contact = () => {
                 We’re ready to support your next project.
               </h1>
               <p className="max-w-3xl text-base leading-8 text-(--text-muted) sm:text-lg">
-                Whether you're asking about the store layout, product ideas, or the demo itself, send us a quick note and we'll respond promptly.
+                Whether you're asking about the store layout, product ideas, or
+                the demo itself, send us a quick note and we'll respond
+                promptly.
               </p>
             </div>
             <div className="grid gap-5 rounded-[28px] bg-(--bg-card) p-7 ring-1 ring-(--border)">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Email</p>
-                <p className="mt-2 text-xl font-semibold text-(--text-primary)">support@fakestore.com</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">
+                  Email
+                </p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">
+                  support@fakestore.com
+                </p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Visit</p>
-                <p className="mt-2 text-xl font-semibold text-(--text-primary)">123 Market Street, Demo City</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">
+                  Visit
+                </p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">
+                  123 Market Street, Demo City
+                </p>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">Hours</p>
-                <p className="mt-2 text-xl font-semibold text-(--text-primary)">Mon - Fri · 9am - 6pm</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/90">
+                  Hours
+                </p>
+                <p className="mt-2 text-xl font-semibold text-(--text-primary)">
+                  Mon - Fri · 9am - 6pm
+                </p>
               </div>
             </div>
             <div className="rounded-[28px] bg-(--bg-card) p-6 ring-1 ring-(--border)">
-              <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">Need faster help?</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">
+                Need faster help?
+              </p>
               <p className="mt-3 text-(--text-muted) leading-7">
-                Reach out with a short summary and we aim to respond within one business day.
+                Reach out with a short summary and we aim to respond within one
+                business day.
               </p>
             </div>
           </div>
@@ -42,15 +59,20 @@ const Contact = () => {
           <div className="rounded-[36px] bg-(--bg-panel) p-10 shadow-2xl ring-1 ring-(--border)">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">Send a message</p>
-                <h2 className="mt-3 text-3xl font-bold text-(--text-primary)">Start a conversation</h2>
+                <p className="text-sm uppercase tracking-[0.35em] text-(--accent)/80">
+                  Send a message
+                </p>
+                <h2 className="mt-3 text-3xl font-bold text-(--text-primary)">
+                  Start a conversation
+                </h2>
               </div>
               <div className="rounded-full bg-(--accent)/15 px-4 py-2 text-sm font-semibold text-(--accent)">
                 Response in 24h
               </div>
             </div>
             <p className="mt-4 text-(--text-muted)">
-              Fill out the details below and our team will be in touch with the next steps.
+              Fill out the details below and our team will be in touch with the
+              next steps.
             </p>
 
             <form className="mt-8 grid gap-5">
@@ -101,7 +123,7 @@ const Contact = () => {
         </div>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
