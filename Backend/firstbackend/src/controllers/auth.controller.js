@@ -1,17 +1,19 @@
 import User from "../models/user.model.js";
 
-export const RegisterUser = async (req, res) => {
+export const RegisterUser = async (req, res, next) => {
   try {
     const { fullName, email, password, phone, gender, dob } = req.body;
 
     if (!fullName || !email || !password || !phone || !gender || !dob) {
-      res.status(400).json({ message: "All fields required" });
-      return;
+      const error = new Error("All fields required");
+      error.statusCode = 400;
+      return next(error);
     }
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      res.status(409).json({ message: "Email Already Registered" });
-      return;
+      const error = new Error("Email Already Registered");
+      error.statusCode = 409;
+      return next(error);
     }
 
     const photoUrl = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
@@ -29,17 +31,16 @@ export const RegisterUser = async (req, res) => {
       dob,
       photo,
     });
-    res.status(201).json({message:"User Registered Successfully"})
-
+    const error = new Error("User Registered Successfully");
+    error.statusCode = 201;
   } catch (error) {
-    res.status(500).json({message:"Internal Sever Error"})
+    next(error);
   }
 };
 
 export const LoginUser = (req, res) => {
   res.json({ message: "Login Successfull from auth controller" });
 };
-
 
 export const LogoutUser = (req, res) => {
   res.json({ message: "Logout Successfull from auth controller" });
