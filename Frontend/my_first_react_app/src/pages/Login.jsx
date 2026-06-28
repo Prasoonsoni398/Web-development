@@ -10,106 +10,110 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("UserName:", userName);
-    console.log("Password:", password);
+    console.log("Email :", userName);
+    console.log("Password :", password);
   };
 
   return (
-    <div className="position-relative login w-100 ">
-      {/* Background Image */}
-      <div className="login-bg">
-        <img
-          src={loginBg}
-          alt="Food Table"
-          
-        />
-      </div>
+    <section className="relative h-[91vh] w-full">
+      {/* Background */}
+      <img
+        src={loginBg}
+        alt="Food Table"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
       {/* Login Card */}
-      <div className="login-div card d-grid position-absolute p-4">
-        <h2 className="text-center fw-bolder">Welcome Back</h2>
-        <p className="text-center">Login to your Cravings account</p>
+      <div className="absolute left-[8%] top-1/2 -translate-y-1/2">
+        <div className="card w-[430px] bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="text-center text-3xl font-bold text-primary">
+              Welcome Back
+            </h2>
 
-        <form onSubmit={handleSubmit}>
-          {/* Email */}
-          <div className="login-input d-grid gap-2 mb-3 mt-2">
-            <span className="fw-semibold">Email</span>
-            <input
-              type="email"
-              className="input-field form-control shadow-none"
-              placeholder="Enter your Email"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              required
-            />
-          </div>
+            <p className="mb-4 text-center text-secondary">
+              Login to your Cravings account
+            </p>
 
-          {/* Password */}
-          <div className="login-input d-grid gap-2 mb-3">
-            <span className="fw-semibold">Password</span>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Email */}
+              <div>
+                <label className="label-text mb-2 block font-semibold">
+                  Email
+                </label>
 
-            <div className="d-flex align-items-center pe-3 input-field border rounded">
-              <input
-                type={showPassword ? "text" : "password"}
-                className="form-control shadow-none bg-transparent border-0"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
+                <input
+                  type="email"
+                  className="input w-full"
+                  placeholder="Enter your Email"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
+                />
+              </div>
 
-              <span
-                onClick={() => setShowPassword(!showPassword)}
-                style={{ cursor: "pointer" }}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-              </span>
-            </div>
-          </div>
+              {/* Password */}
+              <div>
+                <label className="label-text mb-2 block font-semibold">
+                  Password
+                </label>
 
-          {/* Remember Me */}
-          <div className="remember d-flex justify-content-between align-items-center">
-            <div className="d-flex gap-2 align-items-center">
-              <input type="checkbox" id="remember" />
-              <label htmlFor="remember" className="terms">
-                Remember me
-              </label>
+                <div className="input flex items-center">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="w-full outline-none"
+                    placeholder="Enter your Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="cursor-pointer"
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+              </div>
+
+              {/* Remember */}
+              <div className="flex items-center justify-between">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    className="checkbox checkbox-primary checkbox-sm"
+                  />
+                  <span className="label-text">Remember me</span>
+                </label>
+
+                <Link
+                  to="/forgot-password"
+                  className="link link-primary text-sm"
+                >
+                  Forgot Password?
+                </Link>
+              </div>
+
+              {/* Login */}
+              <button className="btn btn-primary w-full">
+                Login
+              </button>
+            </form>
+
+            <div className="divider">
+              Don't have an account?
             </div>
 
             <Link
-              to="/forgot-password"
-              className="terms text-decoration-none"
+              to="/register"
+              className="link link-primary text-center font-semibold"
             >
-              Forgot Password?
+              Create an account
             </Link>
           </div>
-
-          {/* Login Button */}
-          <button
-            className="w-100 mt-4 mb-3 py-2 border-0 rounded-2 text-white"
-            type="submit"
-          >
-            Login
-          </button>
-        </form>
-
-        {/* Register Link */}
-        <div className="d-flex align-items-center mb-3 line terms">
-          <hr className="flex-grow-1" />
-          <span className="mx-2">Don't have an account?</span>
-          <hr className="flex-grow-1" />
         </div>
-
-        <Link
-          to="/register"
-          className="text-center text-decoration-none"
-          id="anchor-underline"
-        >
-          <b>Create an account</b>
-        </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,70 +1,104 @@
 import { useState } from "react";
+import contactBg from "../assets/images/foodTable.webp";
 
 function ContactUs() {
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("UserName :", userName);
-    console.log("Email :", email);
-    console.log("Message :", message);
+    console.log(formData);
   };
 
   return (
-    <>
-      <div className="d-flex justify-content-center">
-        <div className="bg-light border shadow rounded w-50 mt-5 p-5">
-          <h1 className="text-center fw-bold text-primary">Contact Us</h1>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label className="form-label fw-semibold">Full Name</label>
+    <section className="relative h-[91vh] w-full overflow-hidden">
+      {/* Background */}
+      <img
+        src={contactBg}
+        alt="Contact Background"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
+      {/* Contact Card */}
+      <div className="absolute left-[6%] top-1/2 -translate-y-1/2">
+        <div className="card w-[480px] bg-base-100 shadow-2xl">
+          <div className="card-body p-8">
+            <h1 className="text-center text-4xl font-bold text-primary">
+              Contact Us
+            </h1>
+
+            <p className="mb-6 text-center text-secondary">
+              Have a question? We'd love to hear from you.
+            </p>
+
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
               <input
-                type="text"
-                className="form-control shadow-none border-2"
-                placeholder="Enter Your Name"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                className="input input-bordered w-full"
+                placeholder="Enter your full name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
               />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label fw-semibold">Email Address</label>
 
               <input
                 type="email"
-                className="form-control shadow-none border-2"
-                placeholder="Enter Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                className="input input-bordered w-full"
+                placeholder="Enter your email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
               />
-            </div>
 
-            <div className="mb-3">
-              <label className="form-label fw-semibold">Message</label>
+              <input
+                type="tel"
+                className="input input-bordered w-full"
+                placeholder="Enter your phone number"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+
+              <input
+                className="input input-bordered w-full"
+                placeholder="What is this about?"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+              />
 
               <textarea
-                className="form-control shadow-none border-2 "
-                rows={4}
-                style={{ resize: "none" }}
-                placeholder="Enter Your Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
-            </div>
+                rows="5"
+                className="textarea h-10 resize-none textarea-bordered h-fixed w-full"
+                placeholder="Write your message here..."
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
 
-            <div className="d-flex justify-content-center mt-3">
-              <button className="btn btn-primary px-4 py-2" type="submit">
+              <button className="btn btn-primary w-full">
                 Send Message
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
